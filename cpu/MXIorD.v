@@ -19,10 +19,10 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module MXIorD(
-    input in0,
-    input in1,
+    input[31:0] in0,
+    input[31:0] in1,
     input IorD,
-    output out
+    output[31:0] out
     );
 
 reg tmp;

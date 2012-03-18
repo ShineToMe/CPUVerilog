@@ -1,5 +1,5 @@
 ISim log file
-Running: D:\cpu\testPCSetter_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb D:/cpu/testPCSetter_isim_beh.wdb 
+Running: D:\cpu\testMXAluSrcB_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb D:/cpu/testMXAluSrcB_isim_beh.wdb 
 ISim O.87xd (signature 0x2f00eba5)
 WARNING: A WEBPACK license was found.
 WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
@@ -11,16 +11,3 @@ Time resolution is 1 ps
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-# run all
-# run all
-# run all
-# run all
-# run all
-# restart
-# run all
-Simulator is doing circuit initialization process.
-Finished circuit initialization process.
-# run 1.00us
-# run 1.00us
-# run all
-# run all

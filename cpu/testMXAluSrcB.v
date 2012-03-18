@@ -25,16 +25,16 @@
 module testMXAluSrcB;
 
 	// Inputs
-	reg in0;
-	reg in1;
-	reg in2;
-	reg in3;
-	reg in4;
-	reg in5;
+	reg[31:0] in0;
+	reg[31:0] in1;
+	reg[31:0] in2;
+	reg[31:0] in3;
+	reg[31:0] in4;
+	reg[31:0] in5;
 	reg[2:0] ALUSrcB;
 
 	// Outputs
-	wire out;
+	wire[31:0] out;
 
 	// Instantiate the Unit Under Test (UUT)
 	MXAluSrcB uut (

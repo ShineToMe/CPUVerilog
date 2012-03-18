@@ -25,12 +25,12 @@
 module testMXIorD;
 
 	// Inputs
-	reg in0;
-	reg in1;
-	reg IorD;
+	reg[31:0] in0;
+	reg[31:0] in1;
+	reg[31:0] IorD;
 
 	// Outputs
-	wire out;
+	wire[31:0] out;
 
 	// Instantiate the Unit Under Test (UUT)
 	MXIorD uut (
