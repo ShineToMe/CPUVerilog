@@ -35,6 +35,12 @@
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Control.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="Control.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="Control.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="ImmediateShifter.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="ImmediateShifter.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="ImmediateShifter.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="ImmediateSignExtend.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="ImmediateSignExtend.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="ImmediateSignExtend.xst"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="MXALUSrcA.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="MXALUSrcA.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="MXALUSrcA.xst"/>
@@ -67,19 +73,25 @@
     <file xil_pn:fileType="FILE_XST" xil_pn:name="PC.xst"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="Test_MXALUSrcA_isim_beh.exe"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="Test_MXRegDst_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="ValueShifter.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="ValueShifter.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="ValueShifter.xst"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
     <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="testControl_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="testControl_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="testControl_isim_beh.wdb"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="testImmediateSignExtend_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="testImmediateSignExtend_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="testImmediateSignExtend_isim_beh.wdb"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="testMXAluSrcB_isim_beh.exe"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="testMXIorD_isim_beh.exe"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="testPCSetter_isim_beh.exe"/>
-    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="testPC_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="testPC_isim_beh.exe"/>
-    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="testPC_isim_beh.wdb"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="testValueShifter_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
@@ -90,36 +102,42 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1332147499" xil_pn:in_ck="-581052272725477856" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1332147499">
+    <transform xil_pn:end_ts="1332149610" xil_pn:in_ck="-8994652434509636549" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1332149610">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="InputAdded"/>
-      <status xil_pn:value="InputChanged"/>
+      <outfile xil_pn:name="ALUOut.v"/>
+      <outfile xil_pn:name="ARegister.v"/>
+      <outfile xil_pn:name="BRegister.v"/>
       <outfile xil_pn:name="Control.v"/>
+      <outfile xil_pn:name="ImmediateShifter.v"/>
+      <outfile xil_pn:name="ImmediateSignExtend.v"/>
       <outfile xil_pn:name="MXALUSrcA.v"/>
       <outfile xil_pn:name="MXAluSrcB.v"/>
       <outfile xil_pn:name="MXIorD.v"/>
       <outfile xil_pn:name="MXMemToReg.v"/>
       <outfile xil_pn:name="MXPCSource.v"/>
       <outfile xil_pn:name="MXRegDst.v"/>
+      <outfile xil_pn:name="MemoryDataRegister.v"/>
       <outfile xil_pn:name="PC.v"/>
       <outfile xil_pn:name="PCSetter.v"/>
       <outfile xil_pn:name="Test_MXALUSrcA.v"/>
       <outfile xil_pn:name="Test_MXMemToReg.v"/>
       <outfile xil_pn:name="Test_MXPCSource.v"/>
       <outfile xil_pn:name="Test_MXRegDst.v"/>
+      <outfile xil_pn:name="ValueShifter.v"/>
       <outfile xil_pn:name="testControl.v"/>
+      <outfile xil_pn:name="testImmediateSignExtend.v"/>
       <outfile xil_pn:name="testMXAluSrcB.v"/>
       <outfile xil_pn:name="testMXIorD.v"/>
       <outfile xil_pn:name="testPC.v"/>
       <outfile xil_pn:name="testPCSetter.v"/>
+      <outfile xil_pn:name="testValueShifter.v"/>
     </transform>
-    <transform xil_pn:end_ts="1332147499" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="3517189734586588874" xil_pn:start_ts="1332147499">
+    <transform xil_pn:end_ts="1332149526" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="2875582481274368575" xil_pn:start_ts="1332149526">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1332147499" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-6334328589074074222" xil_pn:start_ts="1332147499">
+    <transform xil_pn:end_ts="1332149526" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="6189728511383292839" xil_pn:start_ts="1332149526">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
@@ -127,47 +145,53 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1332147499" xil_pn:in_ck="-581052272725477856" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1332147499">
+    <transform xil_pn:end_ts="1332149610" xil_pn:in_ck="-8994652434509636549" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1332149610">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <outfile xil_pn:name="ALUOut.v"/>
+      <outfile xil_pn:name="ARegister.v"/>
+      <outfile xil_pn:name="BRegister.v"/>
       <outfile xil_pn:name="Control.v"/>
+      <outfile xil_pn:name="ImmediateShifter.v"/>
+      <outfile xil_pn:name="ImmediateSignExtend.v"/>
       <outfile xil_pn:name="MXALUSrcA.v"/>
       <outfile xil_pn:name="MXAluSrcB.v"/>
       <outfile xil_pn:name="MXIorD.v"/>
       <outfile xil_pn:name="MXMemToReg.v"/>
       <outfile xil_pn:name="MXPCSource.v"/>
       <outfile xil_pn:name="MXRegDst.v"/>
+      <outfile xil_pn:name="MemoryDataRegister.v"/>
       <outfile xil_pn:name="PC.v"/>
       <outfile xil_pn:name="PCSetter.v"/>
       <outfile xil_pn:name="Test_MXALUSrcA.v"/>
       <outfile xil_pn:name="Test_MXMemToReg.v"/>
       <outfile xil_pn:name="Test_MXPCSource.v"/>
       <outfile xil_pn:name="Test_MXRegDst.v"/>
+      <outfile xil_pn:name="ValueShifter.v"/>
       <outfile xil_pn:name="testControl.v"/>
+      <outfile xil_pn:name="testImmediateSignExtend.v"/>
       <outfile xil_pn:name="testMXAluSrcB.v"/>
       <outfile xil_pn:name="testMXIorD.v"/>
       <outfile xil_pn:name="testPC.v"/>
       <outfile xil_pn:name="testPCSetter.v"/>
+      <outfile xil_pn:name="testValueShifter.v"/>
     </transform>
-    <transform xil_pn:end_ts="1332147503" xil_pn:in_ck="-581052272725477856" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-7808415862875842063" xil_pn:start_ts="1332147499">
+    <transform xil_pn:end_ts="1332149614" xil_pn:in_ck="-8994652434509636549" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="3032091406104300955" xil_pn:start_ts="1332149610">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
-      <outfile xil_pn:name="testPC_beh.prj"/>
-      <outfile xil_pn:name="testPC_isim_beh.exe"/>
+      <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="testImmediateSignExtend_beh.prj"/>
+      <outfile xil_pn:name="testImmediateSignExtend_isim_beh.exe"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1332147506" xil_pn:in_ck="-6371335496687544377" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="913747304717228052" xil_pn:start_ts="1332147503">
+    <transform xil_pn:end_ts="1332149615" xil_pn:in_ck="3947261293043677215" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-2333165806308692802" xil_pn:start_ts="1332149614">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="isim.cmd"/>
-      <outfile xil_pn:name="testPC_isim_beh.wdb"/>
+      <outfile xil_pn:name="isim.log"/>
+      <outfile xil_pn:name="testImmediateSignExtend_isim_beh.wdb"/>
     </transform>
     <transform xil_pn:end_ts="1332096955" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1332096954">
       <status xil_pn:value="SuccessfullyRun"/>
