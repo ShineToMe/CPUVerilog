@@ -4,6 +4,9 @@ MO MXRegDst NULL MXRegDst.v vlg52/_m_x_reg_dst.bin 1332146527
 MO MXAluSrcB NULL MXAluSrcB.v vlg49/_m_x_alu_src_b.bin 1332144451
 MO PC NULL PC.v vlg53/_p_c.bin 1332147153
 MO MXPCSource NULL MXPCSource.v vlg69/_m_x_p_c_source.bin 1332146379
+MO ALUOut NULL ALUOut.v vlg76/_a_l_u_out.bin 1332148192
 MO MXALUSrcA NULL MXALUSrcA.v vlg08/_m_x_a_l_u_src_a.bin 1332146452
 MO MemoryDataRegister NULL MemoryDataRegister.v vlg34/_memory_data_register.bin 1332147932
 MO MXIorD NULL MXIorD.v vlg43/_m_x_ior_d.bin 1332101354
+MO BRegister NULL BRegister.v vlg0B/_b_register.bin 1332148088
+MO ARegister NULL ARegister.v vlg2A/_a_register.bin 1332148052

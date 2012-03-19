@@ -23,6 +23,15 @@
 
   <files xmlns="http://www.xilinx.com/XMLSchema">
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name=".lso"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="ALUOut.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="ALUOut.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="ALUOut.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="ARegister.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="ARegister.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="ARegister.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="BRegister.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="BRegister.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="BRegister.xst"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Control.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="Control.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="Control.xst"/>
