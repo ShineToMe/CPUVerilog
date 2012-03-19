@@ -12,5 +12,7 @@ MO ValueShifter NULL ValueShifter.v vlg22/_value_shifter.bin 1332148674
 MO MemoryDataRegister NULL MemoryDataRegister.v vlg34/_memory_data_register.bin 1332147932
 MO InstructionRegister NULL InstructionRegister.v vlg13/_instruction_register.bin 1332150319
 MO MXIorD NULL MXIorD.v vlg43/_m_x_ior_d.bin 1332101354
+MO ALU NULL ALU.v vlg2A/_a_l_u.bin 1332189479
+MO ALUControl NULL ALUControl.v vlg23/_a_l_u_control.bin 1332160292
 MO BRegister NULL BRegister.v vlg0B/_b_register.bin 1332148088
 MO ARegister NULL ARegister.v vlg2A/_a_register.bin 1332148052

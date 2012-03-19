@@ -1,21 +1,21 @@
-Running: D:\Xilinx\13.4\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o D:/CPUVerilog/cpu/testInstructionRegister_isim_beh.exe -prj D:/CPUVerilog/cpu/testInstructionRegister_beh.prj work.testInstructionRegister work.glbl 
-ISim O.87xd (signature 0x2f00eba5)
+Running: /opt/Xilinx/13.4/ISE_DS/ISE/bin/lin/unwrapped/fuse -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o /home/stud/3100CPUVerilog/CPUVerilog/cpu/testControl_isim_beh.exe -prj /home/stud/3100CPUVerilog/CPUVerilog/cpu/testControl_beh.prj work.testControl work.glbl 
+ISim O.87xd (signature 0x8ddf5b5d)
 Number of CPUs detected in this system: 2
 Turning on mult-threading, number of parallel sub-compilation jobs: 4 
 Determining compilation order of HDL files
-Analyzing Verilog file "D:/CPUVerilog/cpu/InstructionRegister.v" into library work
-Analyzing Verilog file "D:/CPUVerilog/cpu/testInstructionRegister.v" into library work
-Analyzing Verilog file "D:/Xilinx/13.4/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Analyzing Verilog file "/home/stud/3100CPUVerilog/CPUVerilog/cpu/Control.v" into library work
+Analyzing Verilog file "/home/stud/3100CPUVerilog/CPUVerilog/cpu/testControl.v" into library work
+Analyzing Verilog file "/opt/Xilinx/13.4/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 64844 KB
-Fuse CPU Usage: 452 ms
-Compiling module InstructionRegister
-Compiling module testInstructionRegister
+Fuse Memory Usage: 36012 KB
+Fuse CPU Usage: 1630 ms
+Compiling module Control
+Compiling module testControl
 Compiling module glbl
 Time Resolution for simulation is 1ps.
-Waiting for 1 sub-compilation(s) to finish...
 Compiled 3 Verilog Units
-Built simulation executable D:/CPUVerilog/cpu/testInstructionRegister_isim_beh.exe
-Fuse Memory Usage: 69192 KB
-Fuse CPU Usage: 483 ms
+Built simulation executable /home/stud/3100CPUVerilog/CPUVerilog/cpu/testControl_isim_beh.exe
+Fuse Memory Usage: 72168 KB
+Fuse CPU Usage: 1660 ms
+GCC CPU Usage: 950 ms

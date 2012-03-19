@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "D:/CPUVerilog/cpu/testInstructionRegister_isim_beh.exe" -prj "D:/CPUVerilog/cpu/testInstructionRegister_beh.prj" "work.testInstructionRegister" "work.glbl" 
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "/home/stud/3100CPUVerilog/CPUVerilog/cpu/testControl_isim_beh.exe" -prj "/home/stud/3100CPUVerilog/CPUVerilog/cpu/testControl_beh.prj" "work.testControl" "work.glbl" 
