@@ -26,6 +26,6 @@ module PCSetter(
     output out
     );
 
-assign out = PCWrite & ((zero & PCWriteIfZero) | (!zero & PCWriteIfNonZero));
+assign out = PCWrite | (zero & PCWriteIfZero) | (!zero & PCWriteIfNonZero);
 
 endmodule

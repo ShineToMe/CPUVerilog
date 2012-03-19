@@ -26,21 +26,17 @@ module MXAluSrcB(
     input[31:0] in4,
     input[31:0] in5,
     input [2:0] ALUSrcB,
-    output[31:0] out
+    output reg [31:0] out
     );
-
-reg tmp;
-
-assign out = tmp;
 
 always @*
 	case(ALUSrcB)
-		3'b000: tmp = in0;
-		3'b001: tmp = in1;
-		3'b010: tmp = in2;
-		3'b011: tmp = in3;
-		3'b100: tmp = in4;
-		default: tmp = in5;
+		3'b000: out = in0;
+		3'b001: out = in1;
+		3'b010: out = in2;
+		3'b011: out = in3;
+		3'b100: out = in4;
+		default: out = in5;
 	endcase
 
 endmodule

@@ -22,14 +22,10 @@ module MXIorD(
     input[31:0] in0,
     input[31:0] in1,
     input IorD,
-    output[31:0] out
+    output reg [31:0] out
     );
 
-reg tmp;
-
-assign out = tmp;
-
 always @*
-	tmp = IorD ? in1 : in0;
+	 out = IorD ? in1 : in0;
 
 endmodule

@@ -1,16 +1,16 @@
 Release 13.4 - xst O.87xd (nt)
 Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
---> Parameter TMPDIR set to D:/cpu/xst/projnav.tmp
+--> Parameter TMPDIR set to D:/CPUVerilog/cpu/xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.30 secs
+Total CPU time to Xst completion: 0.51 secs
  
---> Parameter xsthdpdir set to D:/cpu/xst
+--> Parameter xsthdpdir set to D:/CPUVerilog/cpu/xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.30 secs
+Total CPU time to Xst completion: 0.55 secs
  
 --> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
 
@@ -25,7 +25,7 @@ Analysis of file <"MXAluSrcB.prj"> succeeded.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.33 secs
+Total CPU time to Xst completion: 0.69 secs
  
 --> 
 
