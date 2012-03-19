@@ -1,3 +1,7 @@
 MO Control NULL Control.v vlg41/_control.bin 1332116360
+MO MXMemToReg NULL MXMemToReg.v vlg09/_m_x_mem_to_reg.bin 1332146538
+MO MXRegDst NULL MXRegDst.v vlg52/_m_x_reg_dst.bin 1332146527
 MO MXAluSrcB NULL MXAluSrcB.v vlg49/_m_x_alu_src_b.bin 1332144451
+MO MXPCSource NULL MXPCSource.v vlg69/_m_x_p_c_source.bin 1332146379
+MO MXALUSrcA NULL MXALUSrcA.v vlg08/_m_x_a_l_u_src_a.bin 1332146452
 MO MXIorD NULL MXIorD.v vlg43/_m_x_ior_d.bin 1332101354

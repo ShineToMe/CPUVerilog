@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "D:/CPUVerilog/cpu/testControl_isim_beh.exe" -prj "D:/CPUVerilog/cpu/testControl_beh.prj" "work.testControl" "work.glbl" 
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "D:/CPUVerilog/cpu/Test_MXRegDst_isim_beh.exe" -prj "D:/CPUVerilog/cpu/Test_MXRegDst_beh.prj" "work.Test_MXRegDst" "work.glbl" 

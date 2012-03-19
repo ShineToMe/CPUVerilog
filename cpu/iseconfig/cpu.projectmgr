@@ -7,15 +7,16 @@
    <ItemView engineview="SynthesisOnly" guiview="Source" compilemode="AutoCompile" >
       <ClosedNodes>
          <ClosedNodesVersion>2</ClosedNodesVersion>
+         <ClosedNode>/Test_MXALUSrcA D:|CPUVerilog|cpu|Test_MXALUSrcA.v</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>Control (D:/CPUVerilog/cpu/Control.v)</SelectedItem>
+         <SelectedItem>MXRegDst (D:/CPUVerilog/cpu/MXRegDst.v)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000000ce000000020000000000000000000000000200000064ffffffff000000810000000300000002000000ce0000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000000f4000000020000000000000000000000000200000064ffffffff000000810000000300000002000000f40000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>Control (D:/CPUVerilog/cpu/Control.v)</CurrentItem>
+      <CurrentItem>MXRegDst (D:/CPUVerilog/cpu/MXRegDst.v)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -38,7 +39,7 @@
       <SelectedItems/>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000000000000001000000000000000000000000000000000000032b000000040101000100000000000000000000000064ffffffff0000008100000000000000040000004200000001000000000000002400000001000000000000006600000001000000000000025f0000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000000000000010000000000000000000000000000000000000130000000040101000100000000000000000000000064ffffffff000000810000000000000004000000420000000100000000000000240000000100000000000000660000000100000000000000640000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>MXIorD.v</CurrentItem>
    </ItemView>
@@ -65,29 +66,41 @@
          <ClosedNode>User Constraints</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem></SelectedItem>
+         <SelectedItem>Check Syntax</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000011d000000010000000100000000000000000000000064ffffffff0000008100000000000000010000011d0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem></CurrentItem>
+      <CurrentItem>Check Syntax</CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" guiview="Source" compilemode="AutoCompile" >
       <ClosedNodes>
          <ClosedNodesVersion>2</ClosedNodesVersion>
+         <ClosedNode>/Test_MXALUSrcA D:|CPUVerilog|MX's|MXALUSrcA|Test_MXALUSrcA.v</ClosedNode>
+         <ClosedNode>/Test_MXALUSrcA D:|CPUVerilog|cpu|Test_MXALUSrcA.v</ClosedNode>
+         <ClosedNode>/Test_MXMemToReg D:|CPUVerilog|MX's|MXMemToReg|Test_MXMemToReg.v</ClosedNode>
+         <ClosedNode>/Test_MXMemToReg D:|CPUVerilog|cpu|Test_MXMemToReg.v</ClosedNode>
+         <ClosedNode>/Test_MXPCSource D:|CPUVerilog|MX's|MXPCSource|Test_MXPCSource.v</ClosedNode>
+         <ClosedNode>/Test_MXPCSource D:|CPUVerilog|cpu|Test_MXPCSource.v</ClosedNode>
+         <ClosedNode>/Test_MXRegDst D:|CPUVerilog|MX's|MXRegDst|Test_MXRegDst.v</ClosedNode>
+         <ClosedNode>/Test_MXRegDst D:|CPUVerilog|cpu|Test_MXRegDst.v</ClosedNode>
+         <ClosedNode>/testControl D:|CPUVerilog|cpu|testControl.v</ClosedNode>
+         <ClosedNode>/testMXAluSrcB D:|CPUVerilog|cpu|testMXAluSrcB.v</ClosedNode>
          <ClosedNode>/testMXAluSrcB D:|cpu|testMXAluSrcB.v</ClosedNode>
+         <ClosedNode>/testMXIorD D:|CPUVerilog|cpu|testMXIorD.v</ClosedNode>
          <ClosedNode>/testMXIorD D:|cpu|testMXIorD.v</ClosedNode>
+         <ClosedNode>/testPCSetter D:|CPUVerilog|cpu|testPCSetter.v</ClosedNode>
          <ClosedNode>/testPCSetter D:|cpu|testPCSetter.v</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>testControl (D:/CPUVerilog/cpu/testControl.v)</SelectedItem>
+         <SelectedItem>Test_MXRegDst (D:/CPUVerilog/cpu/Test_MXRegDst.v)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000000ff000000020000000000000000000000000200000064ffffffff000000810000000300000002000000ff0000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000126000000020000000000000000000000000200000064ffffffff000000810000000300000002000001260000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>testControl (D:/CPUVerilog/cpu/testControl.v)</CurrentItem>
+      <CurrentItem>Test_MXRegDst (D:/CPUVerilog/cpu/Test_MXRegDst.v)</CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -107,14 +120,14 @@
          <ClosedNodesVersion>1</ClosedNodesVersion>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem></SelectedItem>
+         <SelectedItem>Simulate Behavioral Model</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000011d000000010000000100000000000000000000000064ffffffff0000008100000000000000010000011d0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem></CurrentItem>
+      <CurrentItem>Simulate Behavioral Model</CurrentItem>
    </ItemView>
    <SourceProcessView>000000ff00000000000000020000011b0000011b01000000050100000002</SourceProcessView>
-   <CurrentView>Behavioral Simulation</CurrentView>
+   <CurrentView>Implementation</CurrentView>
 </Project>
