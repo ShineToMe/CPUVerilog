@@ -1,0 +1,3 @@
+verilog work "InstructionRegister.v"
+verilog work "testInstructionRegister.v"
+verilog work "D:/Xilinx/13.4/ISE_DS/ISE//verilog/src/glbl.v"
