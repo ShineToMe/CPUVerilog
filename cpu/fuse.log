@@ -1,22 +1,21 @@
-Running: D:\Xilinx\13.4\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o D:/CPUVerilog/cpu/Test_MXRegDst_isim_beh.exe -prj D:/CPUVerilog/cpu/Test_MXRegDst_beh.prj work.Test_MXRegDst work.glbl 
+Running: D:\Xilinx\13.4\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o D:/CPUVerilog/cpu/testPC_isim_beh.exe -prj D:/CPUVerilog/cpu/testPC_beh.prj work.testPC work.glbl 
 ISim O.87xd (signature 0x2f00eba5)
 Number of CPUs detected in this system: 2
 Turning on mult-threading, number of parallel sub-compilation jobs: 4 
 Determining compilation order of HDL files
-Analyzing Verilog file "D:/CPUVerilog/cpu/MXRegDst.v" into library work
-Analyzing Verilog file "D:/CPUVerilog/cpu/Test_MXRegDst.v" into library work
+Analyzing Verilog file "D:/CPUVerilog/cpu/PC.v" into library work
+Analyzing Verilog file "D:/CPUVerilog/cpu/testPC.v" into library work
 Analyzing Verilog file "D:/Xilinx/13.4/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
-WARNING:HDLCompiler:189 - "D:/CPUVerilog/cpu/Test_MXRegDst.v" Line 42: Size mismatch in connection of port <out>. Formal port size is 5-bit while actual signal size is 1-bit.
 Completed static elaboration
 Fuse Memory Usage: 64844 KB
-Fuse CPU Usage: 359 ms
-Compiling module MXRegDst
-Compiling module Test_MXRegDst
+Fuse CPU Usage: 358 ms
+Compiling module PC
+Compiling module testPC
 Compiling module glbl
 Time Resolution for simulation is 1ps.
 Waiting for 1 sub-compilation(s) to finish...
 Compiled 3 Verilog Units
-Built simulation executable D:/CPUVerilog/cpu/Test_MXRegDst_isim_beh.exe
+Built simulation executable D:/CPUVerilog/cpu/testPC_isim_beh.exe
 Fuse Memory Usage: 70216 KB
 Fuse CPU Usage: 406 ms

@@ -32,7 +32,7 @@ module Test_MXPCSource;
 	reg [31:0] in3;
 
 	// Outputs
-	wire out;
+	wire [31:0] out;
 
 	// Instantiate the Unit Under Test (UUT)
 	MXPCSource uut (

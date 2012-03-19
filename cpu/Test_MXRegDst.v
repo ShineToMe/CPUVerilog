@@ -31,7 +31,7 @@ module Test_MXRegDst;
 	reg [4:0] in2;
 
 	// Outputs
-	wire out;
+	wire [4:0] out;
 
 	// Instantiate the Unit Under Test (UUT)
 	MXRegDst uut (

@@ -1,11 +1,10 @@
 ISim log file
-Running: D:\CPUVerilog\cpu\Test_MXRegDst_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb D:/CPUVerilog/cpu/Test_MXRegDst_isim_beh.wdb 
+Running: D:\CPUVerilog\cpu\testPC_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb D:/CPUVerilog/cpu/testPC_isim_beh.wdb 
 ISim O.87xd (signature 0x2f00eba5)
 WARNING: A WEBPACK license was found.
 WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
 WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
 This is a Lite version of ISim.
-WARNING: File "D:/CPUVerilog/cpu/Test_MXRegDst.v" Line 34.  For instance Test_MXRegDst/uut/, width 5 of formal port out is not equal to width 1 of actual signal out.
 Time resolution is 1 ps
 # onerror resume
 # wave add /

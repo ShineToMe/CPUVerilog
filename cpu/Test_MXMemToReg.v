@@ -31,7 +31,7 @@ module Test_MXMemToReg;
 	reg [31:0] in2;
 
 	// Outputs
-	wire out;
+	wire [31:0] out;
 
 	// Instantiate the Unit Under Test (UUT)
 	MXMemToReg uut (

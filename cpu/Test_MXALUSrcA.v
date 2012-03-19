@@ -30,7 +30,7 @@ module Test_MXALUSrcA;
 	reg [31:0] in1;
 
 	// Outputs
-	wire out;
+	wire [31:0] out;
 
 	// Instantiate the Unit Under Test (UUT)
 	MXALUSrcA uut (
