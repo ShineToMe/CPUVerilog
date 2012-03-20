@@ -39,7 +39,7 @@ module testControl;
 	wire [1:0] MemToReg;
 	wire IRWrite;
 	wire [1:0] PCSource;
-	wire [6:0] ALUOp;
+	wire [1:0] ALUOp;
 	wire [2:0] ALUSrcB;
 	wire ALUSrcA;
 	wire RegWrite;

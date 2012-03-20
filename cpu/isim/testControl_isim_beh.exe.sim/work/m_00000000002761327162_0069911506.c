@@ -10,7 +10,7 @@
 /*  \___\/\___\                                                    */
 /***********************************************************************/
 
-/* This file is designed for use with ISim build 0x8ddf5b5d */
+/* This file is designed for use with ISim build 0x2f00eba5 */
 
 #define XSI_HIDE_SYMBOL_SPEC true
 #include "xsi.h"
@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "/home/stud/3100CPUVerilog/CPUVerilog/cpu/testControl.v";
+static const char *ng0 = "D:/CPUVerilog/cpu/testControl.v";
 static int ng1[] = {0, 0};
 static int ng2[] = {1, 0};
 static unsigned int ng3[] = {26U, 0U};
@@ -44,7 +44,7 @@ static void Initial_69_0(char *t0)
     char *t12;
     char *t13;
 
-LAB0:    t1 = (t0 + 2720U);
+LAB0:    t1 = (t0 + 2732U);
     t2 = *((char **)t1);
     if (t2 == 0)
         goto LAB2;
@@ -66,7 +66,7 @@ LAB4:    xsi_set_current_line(71, ng0);
     t3 = (t0 + 2208);
     xsi_vlogvar_assign_value(t3, t2, 0, 0, 6);
     xsi_set_current_line(76, ng0);
-    t2 = (t0 + 2620);
+    t2 = (t0 + 2632);
     xsi_process_wait(t2, 100000LL);
     *((char **)t1) = &&LAB5;
 
@@ -80,7 +80,7 @@ LAB5:    xsi_set_current_line(79, ng0);
     t3 = (t0 + 2024);
     xsi_vlogvar_assign_value(t3, t2, 0, 0, 1);
     xsi_set_current_line(81, ng0);
-    t2 = (t0 + 2620);
+    t2 = (t0 + 2632);
     xsi_process_wait(t2, 100000LL);
     *((char **)t1) = &&LAB6;
     goto LAB1;
@@ -94,7 +94,7 @@ LAB6:    xsi_set_current_line(82, ng0);
     t3 = (t0 + 2024);
     xsi_vlogvar_assign_value(t3, t2, 0, 0, 1);
     xsi_set_current_line(86, ng0);
-    t2 = (t0 + 2620);
+    t2 = (t0 + 2632);
     xsi_process_wait(t2, 100000LL);
     *((char **)t1) = &&LAB7;
     goto LAB1;
@@ -104,7 +104,7 @@ LAB7:    xsi_set_current_line(87, ng0);
     t3 = (t0 + 2024);
     xsi_vlogvar_assign_value(t3, t2, 0, 0, 1);
     xsi_set_current_line(88, ng0);
-    t2 = (t0 + 2620);
+    t2 = (t0 + 2632);
     xsi_process_wait(t2, 100000LL);
     *((char **)t1) = &&LAB8;
     goto LAB1;
@@ -134,7 +134,7 @@ LAB11:    goto LAB1;
 LAB10:    xsi_set_current_line(95, ng0);
 
 LAB12:    xsi_set_current_line(96, ng0);
-    t9 = (t0 + 2620);
+    t9 = (t0 + 2632);
     xsi_process_wait(t9, 100000LL);
     *((char **)t1) = &&LAB13;
     goto LAB1;

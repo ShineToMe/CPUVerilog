@@ -31,7 +31,7 @@ module Control(
     output reg [1:0] MemToReg,
     output reg IRWrite,
     output reg [1:0] PCSource,
-    output reg [6:0] ALUOp,
+    output reg [1:0] ALUOp,
     output reg [2:0] ALUSrcB,
     output reg ALUSrcA,
     output reg RegWrite,
@@ -97,7 +97,7 @@ reg MemWrite_next;
 reg [1:0] MemToReg_next;
 reg IRWrite_next;
 reg [1:0] PCSource_next;
-reg [6:0] ALUOp_next;
+reg [1:0] ALUOp_next;
 reg [2:0] ALUSrcB_next;
 reg ALUSrcA_next;
 reg RegWrite_next;

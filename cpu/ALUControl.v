@@ -65,7 +65,7 @@ begin
 				case(opCode5_0)
 					ADD: decodedALUOp = ADDI; 
 					AND: decodedALUOp = ANDI; 
-					OR: decodedALUOp = ORI; 
+					OR:  decodedALUOp = ORI; 
 					SEQ: decodedALUOp = SEQI; 
 					SLE: decodedALUOp = SLEI; 
 					SLL: decodedALUOp = SLLI; 
