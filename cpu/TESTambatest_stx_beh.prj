@@ -1,0 +1,5 @@
+verilog isim_temp "ambaMemorySlave.v"
+verilog isim_temp "ambaMemoryMaster.v"
+verilog isim_temp "ambatest.v"
+verilog isim_temp "TESTambatest.v"
+verilog isim_temp "D:/Xilinx/13.4/ISE_DS/ISE//verilog/src/glbl.v"

@@ -1,0 +1,8 @@
+Release 13.3 Drc O.76xd (nt)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Wed Jun 06 20:55:56 2012
+
+drc -z CPU.ncd CPU.pcf
+
+DRC detected 0 errors and 0 warnings.

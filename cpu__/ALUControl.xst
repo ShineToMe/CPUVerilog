@@ -1,0 +1,5 @@
+set -tmpdir "/home/stud/3100CPUVerilog/CPUVerilog/cpu/xst/projnav.tmp"
+set -xsthdpdir "/home/stud/3100CPUVerilog/CPUVerilog/cpu/xst"
+elaborate
+-ifn ALUControl.prj
+-ifmt mixed

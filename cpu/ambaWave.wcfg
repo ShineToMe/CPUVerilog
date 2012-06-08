@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="D:/superPOWEROVER9000/superPOWEROVER9000/TESTambatest_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="TESTambatest" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="42" />
+   <wvobject fp_name="/TESTambatest/uut/ambaMemMaster/state" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">state[3:0]</obj_property>
+      <obj_property name="ObjectShortName">state[3:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TESTambatest/uut/ambaMemMaster/state_next" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">state_next[3:0]</obj_property>
+      <obj_property name="ObjectShortName">state_next[3:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TESTambatest/uut/ambaMemSlave/state" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">state[3:0]</obj_property>
+      <obj_property name="ObjectShortName">state[3:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TESTambatest/uut/ambaMemSlave/state_next" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">state_next[3:0]</obj_property>
+      <obj_property name="ObjectShortName">state_next[3:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TESTambatest/MemData" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">MemData[31:0]</obj_property>
+      <obj_property name="ObjectShortName">MemData[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TESTambatest/isLocked" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">isLocked</obj_property>
+      <obj_property name="ObjectShortName">isLocked</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TESTambatest/LED" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">LED[31:0]</obj_property>
+      <obj_property name="ObjectShortName">LED[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TESTambatest/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TESTambatest/Adress" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Adress[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Adress[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TESTambatest/WriteData" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">WriteData[31:0]</obj_property>
+      <obj_property name="ObjectShortName">WriteData[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TESTambatest/MemRead" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">MemRead</obj_property>
+      <obj_property name="ObjectShortName">MemRead</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TESTambatest/MemWrite" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">MemWrite</obj_property>
+      <obj_property name="ObjectShortName">MemWrite</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TESTambatest/SW" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">SW[31:0]</obj_property>
+      <obj_property name="ObjectShortName">SW[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TESTambatest/uut/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TESTambatest/uut/Adress" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Adress[31:0]</obj_property>
+      <obj_property name="ObjectShortName">Adress[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TESTambatest/uut/WriteData" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">WriteData[31:0]</obj_property>
+      <obj_property name="ObjectShortName">WriteData[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TESTambatest/uut/MemRead" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">MemRead</obj_property>
+      <obj_property name="ObjectShortName">MemRead</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TESTambatest/uut/MemWrite" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">MemWrite</obj_property>
+      <obj_property name="ObjectShortName">MemWrite</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TESTambatest/uut/SW" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">SW[31:0]</obj_property>
+      <obj_property name="ObjectShortName">SW[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TESTambatest/uut/Aclk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">Aclk</obj_property>
+      <obj_property name="ObjectShortName">Aclk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TESTambatest/uut/ARAddr" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ARAddr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ARAddr[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TESTambatest/uut/ARValid" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ARValid</obj_property>
+      <obj_property name="ObjectShortName">ARValid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TESTambatest/uut/ARReady" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ARReady</obj_property>
+      <obj_property name="ObjectShortName">ARReady</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TESTambatest/uut/RData" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">RData[31:0]</obj_property>
+      <obj_property name="ObjectShortName">RData[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TESTambatest/uut/RValid" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">RValid</obj_property>
+      <obj_property name="ObjectShortName">RValid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TESTambatest/uut/RResp" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">RResp</obj_property>
+      <obj_property name="ObjectShortName">RResp</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TESTambatest/uut/RReady" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">RReady</obj_property>
+      <obj_property name="ObjectShortName">RReady</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TESTambatest/uut/AWAddr" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">AWAddr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">AWAddr[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TESTambatest/uut/AWValid" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">AWValid</obj_property>
+      <obj_property name="ObjectShortName">AWValid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TESTambatest/uut/AWReady" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">AWReady</obj_property>
+      <obj_property name="ObjectShortName">AWReady</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TESTambatest/uut/WData" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">WData[31:0]</obj_property>
+      <obj_property name="ObjectShortName">WData[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TESTambatest/uut/WValid" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">WValid</obj_property>
+      <obj_property name="ObjectShortName">WValid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TESTambatest/uut/WReady" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">WReady</obj_property>
+      <obj_property name="ObjectShortName">WReady</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TESTambatest/uut/BResp" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">BResp</obj_property>
+      <obj_property name="ObjectShortName">BResp</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TESTambatest/uut/BReady" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">BReady</obj_property>
+      <obj_property name="ObjectShortName">BReady</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TESTambatest/uut/BValid" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">BValid</obj_property>
+      <obj_property name="ObjectShortName">BValid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TESTambatest/uut/OLOLOMemData" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">OLOLOMemData[31:0]</obj_property>
+      <obj_property name="ObjectShortName">OLOLOMemData[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TESTambatest/uut/OLOLOisLocked" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">OLOLOisLocked</obj_property>
+      <obj_property name="ObjectShortName">OLOLOisLocked</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TESTambatest/uut/OLOLOLED" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">OLOLOLED[31:0]</obj_property>
+      <obj_property name="ObjectShortName">OLOLOLED[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TESTambatest/uut/MemData" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">MemData[31:0]</obj_property>
+      <obj_property name="ObjectShortName">MemData[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TESTambatest/uut/isLocked" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">isLocked</obj_property>
+      <obj_property name="ObjectShortName">isLocked</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TESTambatest/uut/LED" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">LED[31:0]</obj_property>
+      <obj_property name="ObjectShortName">LED[31:0]</obj_property>
+   </wvobject>
+</wave_config>

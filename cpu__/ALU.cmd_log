@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "/home/stud/3100CPUVerilog/CPUVerilog/cpu/ALU.xst" -ofn "/home/stud/3100CPUVerilog/CPUVerilog/cpu/ALU.syr" 
