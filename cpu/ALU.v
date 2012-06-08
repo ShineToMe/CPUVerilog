@@ -44,7 +44,6 @@ assign zero = (out == 0);
 
 always @*
 begin
-	out = 0;
 	case (ALUOp)
 		BEQZ:	out = a;
 		ADD:	out = a + b;
@@ -58,7 +57,8 @@ begin
 		SRA:	out = a >>> b[2:0];
 		SRL:	out = a >> b[2:0];
 		SUB:	out = a - b;
-		XOR:	out = a ^ b;		
+		XOR:	out = a ^ b;	
+		default:	out = 0;
 	endcase
 end
 

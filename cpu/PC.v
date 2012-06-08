@@ -18,7 +18,7 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module PC(
+module EnableRegister(
     input clk,
     input reset,
     input enable,
@@ -26,7 +26,7 @@ module PC(
     output reg[31:0] q
     );
 
-always @(posedge clk or posedge reset)
+always @(negedge clk or posedge reset)
 	if(reset)
 		q <= 32'b0;
 	else

@@ -21,6 +21,7 @@
 module Control(
     input clk,
     input reset,
+	 input isAmbaLocked,
     input [5:0] opCode,
     output reg PCWriteIfNonZero,
     output reg PCWriteIfZero,
@@ -35,13 +36,16 @@ module Control(
     output reg [2:0] ALUSrcB,
     output reg ALUSrcA,
     output reg RegWrite,
-    output reg [1:0] RegDst
+    output reg [1:0] RegDst,
+	 output reg AluResultEnable,
+	 output reg clkOut
     );
 
 //STATES:
 //(https://github.com/ShineToMe/CPUVerilog/wiki/Control-states-graph)
-parameter STATE_0 = 0;	//выборка команды
-parameter STATE_1 = 1;	//декодирование
+parameter STATE_RESET = -1;	//
+parameter STATE_0 = 0;	// 
+parameter STATE_1 = 1;	//
 parameter STATE_2 = 2;	//LW or SW - adress
 parameter STATE_3 = 3;	//LW - execute
 parameter STATE_4 = 4;	//LW - save to reg
@@ -102,31 +106,39 @@ reg [2:0] ALUSrcB_next;
 reg ALUSrcA_next;
 reg RegWrite_next;
 reg [1:0] RegDst_next;
+reg AluResultEnable_next;
 
 ////////////////
 
+always @(clk)
+begin
+	clkOut = clk;
+end
+
 always @(posedge clk or posedge reset)
 begin
+	//clkOut = clk; //todo: remove this shit
 	if(reset)
 	begin
-		state = STATE_0;
+		state = STATE_RESET; //      
 		
 		PCWriteIfNonZero = 0;
 		PCWriteIfZero = 0;
-		PCWrite = 1;
+		PCWrite = 0;
 		IorD = 0;
-		MemRead = 1;
+		MemRead = 0;
 		MemWrite = 0;
 		MemToReg = 0;
-		IRWrite = 1;
+		IRWrite = 0;
 		PCSource = 0;
 		ALUOp = 0;
-		ALUSrcB = 1;
+		ALUSrcB = 0;
 		ALUSrcA = 0;
 		RegWrite = 0;
-		RegDst = 0;		
+		RegDst = 0;
+		AluResultEnable = 0;
 	end		
-	else
+	else if(~isAmbaLocked)
 		begin
 			state = state_next;
 			
@@ -144,6 +156,7 @@ begin
 			ALUSrcA = ALUSrcA_next;
 			RegWrite = RegWrite_next;
 			RegDst = RegDst_next;
+			AluResultEnable = AluResultEnable_next;
 		end
 end
 
@@ -165,7 +178,7 @@ begin
 	ALUSrcA_next = ALUSrcA;
 	RegWrite_next = RegWrite;
 	RegDst_next = RegDst;
-	
+	AluResultEnable_next = AluResultEnable;
 	case(state)
 		STATE_0: begin
 						state_next = STATE_1;
@@ -184,6 +197,7 @@ begin
 						ALUSrcA_next = 0;
 						RegWrite_next = 0;
 						RegDst_next = 0;
+						AluResultEnable_next = 1;
 					end
 		STATE_1: begin
 						if(opCode == LW || opCode == SW)
@@ -204,6 +218,7 @@ begin
 							ALUSrcA_next = 1;
 							RegWrite_next = 0;
 							RegDst_next = 0;
+							AluResultEnable_next = 1;
 						end
 						else if(opCode == ADDI || opCode == ORI || opCode == SEQI || opCode == SLEI || opCode == SLLI || 
 								opCode == SLTI || opCode == SNEI || opCode == SRAI || opCode == SUBI || opCode == XORI)
@@ -224,6 +239,7 @@ begin
 							ALUSrcA_next = 1;
 							RegWrite_next = 0;
 							RegDst_next = 0;
+							AluResultEnable_next = 1;
 						end	
 						else if(opCode == ANDI || opCode == SRLI)
 						begin
@@ -243,6 +259,7 @@ begin
 							ALUSrcA_next = 1;
 							RegWrite_next = 0;
 							RegDst_next = 0;
+							AluResultEnable_next = 1;
 						end		
 						else if(opCode == LHI)
 						begin
@@ -262,6 +279,7 @@ begin
 							ALUSrcA_next = 0;
 							RegWrite_next = 1;
 							RegDst_next = 0;
+							AluResultEnable_next = 0;
 						end				
 						else if(opCode == BEQZ)
 						begin
@@ -281,6 +299,7 @@ begin
 							ALUSrcA_next = 1;
 							RegWrite_next = 0;
 							RegDst_next = 0;
+							AluResultEnable_next = 1;
 						end	
 						else if(opCode == BNEZ)
 						begin
@@ -300,6 +319,7 @@ begin
 							ALUSrcA_next = 1;
 							RegWrite_next = 0;
 							RegDst_next = 0;
+							AluResultEnable_next = 1;
 						end	
 						else if(opCode == J)
 						begin
@@ -307,7 +327,7 @@ begin
 							
 							PCWriteIfNonZero_next = 0;
 							PCWriteIfZero_next = 0;
-							PCWrite_next = 0;
+							PCWrite_next = 1;
 							IorD_next = 0;
 							MemRead_next = 0;
 							MemWrite_next = 0;
@@ -317,8 +337,9 @@ begin
 							ALUOp_next = 0;
 							ALUSrcB_next = 0;
 							ALUSrcA_next = 0;
-							RegWrite_next = 1;
+							RegWrite_next = 0;
 							RegDst_next = 0;
+							AluResultEnable_next = 0;
 						end
 						else if(opCode == JAL)
 						begin
@@ -338,6 +359,7 @@ begin
 							ALUSrcA_next = 0;
 							RegWrite_next = 1;
 							RegDst_next = 2;
+							AluResultEnable_next = 0;
 						end
 						else if(opCode == JALR)
 						begin
@@ -357,6 +379,7 @@ begin
 							ALUSrcA_next = 0;
 							RegWrite_next = 1;
 							RegDst_next = 2;
+							AluResultEnable_next = 0;
 						end
 						else if(opCode == JR)
 						begin
@@ -364,7 +387,7 @@ begin
 							
 							PCWriteIfNonZero_next = 0;
 							PCWriteIfZero_next = 0;
-							PCWrite_next = 0;
+							PCWrite_next = 1;
 							IorD_next = 0;
 							MemRead_next = 0;
 							MemWrite_next = 0;
@@ -374,8 +397,9 @@ begin
 							ALUOp_next = 0;
 							ALUSrcB_next = 0;
 							ALUSrcA_next = 0;
-							RegWrite_next = 1;
+							RegWrite_next = 0;
 							RegDst_next = 0;
+							AluResultEnable_next = 0;
 						end
 						else //R-type
 						begin
@@ -395,6 +419,7 @@ begin
 							ALUSrcA_next = 1;
 							RegWrite_next = 0;
 							RegDst_next = 0;
+							AluResultEnable_next = 1;
 						end		
 					end
 		STATE_2: begin
@@ -416,6 +441,7 @@ begin
 							ALUSrcA_next = 0;
 							RegWrite_next = 0;
 							RegDst_next = 0;
+							AluResultEnable_next = 0;
 						end
 						else begin
 							state_next = STATE_5;
@@ -434,6 +460,7 @@ begin
 							ALUSrcA_next = 0;
 							RegWrite_next = 0;
 							RegDst_next = 0;
+							AluResultEnable_next = 0;
 						end
 					end		
 		STATE_3: begin
@@ -453,6 +480,7 @@ begin
 						ALUSrcA_next = 0;
 						RegWrite_next = 1;
 						RegDst_next = 0;
+						AluResultEnable_next = 0;
 					end		
 		STATE_6: begin
 						state_next = STATE_7;
@@ -471,6 +499,7 @@ begin
 						ALUSrcA_next = 0;
 						RegWrite_next = 1;
 						RegDst_next = 1;
+						AluResultEnable_next = 0;
 					end					
 		STATE_8: begin
 						state_next = STATE_9;
@@ -489,6 +518,7 @@ begin
 						ALUSrcA_next = 0;
 						RegWrite_next = 1;
 						RegDst_next = 0;
+						AluResultEnable_next = 0;
 					end	
 		STATE_10: begin
 						state_next = STATE_9;
@@ -507,6 +537,7 @@ begin
 						ALUSrcA_next = 0;
 						RegWrite_next = 1;
 						RegDst_next = 0;
+						AluResultEnable_next = 0;
 					end	
 		default: begin
 						state_next = STATE_0;
@@ -525,6 +556,7 @@ begin
 						ALUSrcA_next = 0;
 						RegWrite_next = 0;
 						RegDst_next = 0;
+						AluResultEnable_next = 1;
 					end	
 	endcase
 end

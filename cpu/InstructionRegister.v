@@ -36,11 +36,12 @@ assign q25_21 = instruction[25:21];
 assign q20_16 = instruction[20:16];
 assign q15_0 = instruction[15:0];
 
-always @(posedge clk or posedge reset)
+always @(negedge clk)	
+begin
 	if(reset)
-		instruction <= 32'b0;
-	else
-	if(enable)
-		instruction <= d;
+		instruction = 32'b0;
+	else if(enable)
+		instruction = d;
+end
 
 endmodule

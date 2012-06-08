@@ -1,5 +1,0 @@
-set -tmpdir "D:/CPUVerilog/cpu/xst/projnav.tmp"
-set -xsthdpdir "D:/CPUVerilog/cpu/xst"
-elaborate
--ifn Registers.prj
--ifmt mixed

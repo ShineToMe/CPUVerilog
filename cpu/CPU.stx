@@ -1,16 +1,16 @@
 Release 13.4 - xst O.87xd (nt)
 Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
---> Parameter TMPDIR set to D:/CPUVerilog/cpu/xst/projnav.tmp
+--> Parameter TMPDIR set to D:/superPOWEROVER9000/superPOWEROVER9000/xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.31 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.25 secs
  
---> Parameter xsthdpdir set to D:/CPUVerilog/cpu/xst
+--> Parameter xsthdpdir set to D:/superPOWEROVER9000/superPOWEROVER9000/xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.31 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.25 secs
  
 --> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
 
@@ -20,12 +20,10 @@ Total CPU time to Xst completion: 0.31 secs
 Compiling verilog file "SimpleRegister.v" in library work
 Compiling verilog file "Registers.v" in library work
 Module <SimpleRegister> compiled
-Compiling verilog file "PCSetter.v" in library work
-Module <Registers> compiled
 Compiling verilog file "PC.v" in library work
-Module <PCSetter> compiled
+Module <Registers> compiled
 Compiling verilog file "Memory.v" in library work
-Module <PC> compiled
+Module <EnableRegister> compiled
 Compiling verilog file "InstructionRegister.v" in library work
 Module <Memory> compiled
 Compiling verilog file "Control.v" in library work
@@ -42,8 +40,8 @@ Analysis of file <"CPU.prj"> succeeded.
  
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.39 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.30 secs
  
 --> 
 

@@ -20,9 +20,12 @@
 //////////////////////////////////////////////////////////////////////////////////
 module CPU(
     input clk,
-    input reset
+    input reset,
+	 input [31:0] SW,
+	 output [31:0] LED
     );
 
+wire innerClk;
 wire PCWriteIfNonZero;
 wire PCWriteIfZero;
 wire PCWrite;
@@ -39,8 +42,7 @@ wire RegWrite;
 wire [1:0] RegDst;
 
 wire zero;
-wire PCWriteEnable;
-
+wire PCWriteEnable = PCWrite | (zero & PCWriteIfZero) | (!zero & PCWriteIfNonZero);
 wire [31:0] currentPC;
 
 wire [31:0] ALUResult;
@@ -50,8 +52,8 @@ wire [31:0] memAdress = IorD ? ALUOutValue : currentPC;
 
 wire [31:0] memData;
 wire [31:0] memDataRegOut;
-wire [31:0] BOut;
-wire [31:0] AOut;
+wire [31:0] Bout;
+wire [31:0] Aout;
 wire [31:0] readData1;
 wire [31:0] readData2;
 
@@ -59,6 +61,7 @@ wire [5:0] instruction31_26;
 wire [4:0] instruction25_21;
 wire [4:0] instruction20_16;
 wire [15:0] instruction15_0;
+wire [5:0] instruction5_0 = instruction15_0[5:0];
 wire [25:0] instruction25_0 = {instruction25_21, instruction20_16, instruction15_0};
 
 wire [31:0] immediateSignExtend = { {16{instruction15_0[15]}}, instruction15_0[15:0] };
@@ -66,13 +69,15 @@ wire [31:0] immediateShift = immediateSignExtend << 2;
 
 wire [5:0] decodedALUOp;
 
-reg [5:0] writeRegister;
+wire isAmbaLocked;
+
+reg [4:0] writeRegister;
 	always @*
 	begin
 		case (RegDst)
 		 2'b00   : writeRegister = instruction20_16;
 		 2'b01   : writeRegister = instruction15_0[15:11];
-		 default : writeRegister = 31;
+		 default : writeRegister = 31; //case 'b10
 		endcase
 	end
 	
@@ -82,25 +87,26 @@ reg [31:0] writeData;
 		case (MemToReg)
 		 2'b00   : writeData = ALUOutValue;
 		 2'b01   : writeData = memDataRegOut;
-		 default : writeData = {instruction15_0, 15'h0};
+		 default : writeData = {instruction15_0, 15'h0}; //case 'b10
 		endcase
 	end
 
-wire [31:0] aluSrcA = ALUSrcA ? AOut : currentPC;
+wire [31:0] aluSrcAValue = ALUSrcA ? Aout : currentPC;
 
-reg [31:0] aluSrcB;
+reg [31:0] aluSrcBValue;
 	always @*
 	begin
 		case (ALUSrcB)
-		 3'b000   : aluSrcB = BOut;
-		 3'b001   : aluSrcB = 4;
-		 3'b010   : aluSrcB = {15'h0, instruction15_0};
-		 3'b101   : aluSrcB = immediateSignExtend;
-		 default : aluSrcB = immediateShift; //4
+		 3'b000   : aluSrcBValue = Bout;
+		 3'b001   : aluSrcBValue = 1; //for PC++
+		 3'b010   : aluSrcBValue = {15'h0, instruction15_0};
+		 3'b011   : aluSrcBValue = immediateSignExtend;
+		 default : aluSrcBValue = immediateShift; //case 'b100
 		endcase
 	end
 	
-wire [31:0] JumpAdress = (instruction25_0 << 2) + currentPC;
+wire [31:0] instruction25_0SignExtend = {{6{instruction25_0[25]}}, instruction25_0[25:0] };
+wire [31:0] JumpAdress = instruction25_0SignExtend + currentPC;
 
 reg [31:0] newPC;
 	always @*
@@ -108,15 +114,18 @@ reg [31:0] newPC;
 		case (PCSource)
 		 2'b00   : newPC = ALUResult;
 		 2'b01   : newPC = ALUOutValue;
-		 2'b11   : newPC = JumpAdress;
-		 default : newPC = readData1;
+		 2'b10   : newPC = JumpAdress;
+		 default : newPC = readData1; //case 'b11
 		endcase
 	end
+	
+wire AluResultEnable;
 
 Control control(
     .clk(clk),
     .reset(reset),
-    .opCode(opCode),
+	 .isAmbaLocked(isAmbaLocked),
+    .opCode(instruction31_26),
     .PCWriteIfNonZero(PCWriteIfNonZero),
     .PCWriteIfZero(PCWriteIfZero),
     .PCWrite(PCWrite),
@@ -130,45 +139,43 @@ Control control(
     .ALUSrcB(ALUSrcB),
     .ALUSrcA(ALUSrcA),
     .RegWrite(RegWrite),
-    .RegDst(RegDst)
+    .RegDst(RegDst),
+	 .clkOut(innerClk),
+	 .AluResultEnable(AluResultEnable)
 );
 
-PCSetter pcSetter(
-	 .PCWrite(PCWrite),
-    .PCWriteIfZero(PCWriteIfZero),
-    .PCWriteIfNonZero(PCWriteIfNonZero),
-    .zero(zero),
-    .out(PCWriteEnable)
-);
-
-PC pc(
-	 .clk(clk),
+EnableRegister pc(
+	 .clk(innerClk),
     .reset(reset),
-    .enable(PCWriteEnable),
+    .enable(PCWriteEnable && ~isAmbaLocked),
     .d(newPC),
     .q(currentPC)
 );
 
-Memory memory(
+ambatest memory(
 	.Adress(memAdress),
-   .WriteData(BOut),
+   .WriteData(Bout),
    .MemRead(MemRead),
    .MemWrite(MemWrite),
-   .clk(clk),
-   .MemData(memData)
+   .clk(innerClk),
+   .MemData(memData),
+	.SW(SW),
+	.LED(LED),
+	.isLocked(isAmbaLocked)
 );
 
-SimpleRegister MemoryDataRegister(
-	 .clk(clk),
+EnableRegister MemoryDataRegister(
+	 .clk(innerClk),
     .reset(reset),
-    .d(MemData),
-    .q(MemDataRegOut)    
+    .d(memData),
+    .q(memDataRegOut),
+    .enable(~isAmbaLocked)
 );
 
 InstructionRegister instructionRegister(
-    .clk(clk),
+    .clk(innerClk),
     .reset(reset),
-    .enable(IRWrite),
+    .enable(IRWrite && ~isAmbaLocked),
     .d(memData),
     .q31_26(instruction31_26),
     .q25_21(instruction25_21),
@@ -181,24 +188,26 @@ Registers registers(
     .ReadRegister2(instruction20_16),
     .WriteRegister(writeRegister),
     .WriteData(writeData),
-    .RegWrite(RegWrite),
-    .clk(clk),
+    .RegWrite(RegWrite && ~isAmbaLocked),
+    .clk(innerClk),
     .ReadData1(readData1),
     .ReadData2(readData2)
 );
 
-SimpleRegister ARegister(
-	 .clk(clk),
+EnableRegister ARegister(
+	 .clk(innerClk),
     .reset(reset),
     .d(readData1),
-    .q(Aout)    
+    .q(Aout),
+    .enable(~isAmbaLocked)    
 );
 
-SimpleRegister BRegister(
-	 .clk(clk),
+EnableRegister BRegister(
+	 .clk(innerClk),
     .reset(reset),
     .d(readData2),
-    .q(Bout)    
+    .q(Bout),
+    .enable(~isAmbaLocked)    
 );
 
 ALUControl aluControl(
@@ -208,21 +217,20 @@ ALUControl aluControl(
     .decodedALUOp(decodedALUOp)
 );
 
-
-
-ALU(
-    .a(aluSrcA),
-    .b(aluSrcB),
+ALU alu(
+    .a(aluSrcAValue),
+    .b(aluSrcBValue),
     .ALUOp(decodedALUOp),
     .out(ALUResult),
     .zero(zero)
     );
 
-SimpleRegister ALUOut(
-	 .clk(clk),
+EnableRegister ALUOut(
+	 .clk(innerClk),
     .reset(reset),
     .d(ALUResult),
-    .q(ALUOutValue)    
+    .q(ALUOutValue),
+	 .enable(AluResultEnable && ~isAmbaLocked)
 );
 
 

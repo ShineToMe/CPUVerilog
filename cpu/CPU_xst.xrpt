@@ -5,14 +5,14 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="Xst" timeStamp="Tue Mar 20 12:06:27 2012">
+  <application stringID="Xst" timeStamp="Fri Jun 08 14:15:44 2012">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
         <column stringID="value"/>
         <row stringID="row" value="0">
           <item stringID="variable" value="Path"/>
-          <item stringID="value" value="D:\Xilinx\13.4\ISE_DS\ISE\\lib\nt;D:\Xilinx\13.4\ISE_DS\ISE\\bin\nt;D:\Xilinx\13.4\ISE_DS\PlanAhead\bin;D:\Xilinx\13.4\ISE_DS\ISE\bin\nt;D:\Xilinx\13.4\ISE_DS\ISE\lib\nt;D:\Xilinx\13.4\ISE_DS\EDK\bin\nt;D:\Xilinx\13.4\ISE_DS\EDK\lib\nt;D:\Xilinx\13.4\ISE_DS\EDK\gnu\microblaze\nt\bin;D:\Xilinx\13.4\ISE_DS\EDK\gnu\powerpc-eabi\nt\bin;D:\Xilinx\13.4\ISE_DS\EDK\gnuwin\bin;D:\Xilinx\13.4\ISE_DS\common\bin\nt;D:\Xilinx\13.4\ISE_DS\common\lib\nt;D:\oraclexe\app\oracle\product\10.2.0\server\bin;D:\PROGRA~1\Borland\CBUILD~1\Bin;D:\PROGRA~1\Borland\CBUILD~1\Projects\Bpl;c:\Program Files\NVIDIA Corporation\PhysX\Common;C:\Program Files\CollabNet\Subversion Client;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\Program Files\Common Files\Ulead Systems\MPEG;C:\Program Files\Microsoft SQL Server\80\Tools\Binn\;C:\Program Files\VoiceAge\Common;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Java\jdk1.7.0_01\bin;C:\Program Files\ghc-6.8.2\bin;C:\Program Files\apache-ant-1.8.1\bin;C:\Program Files\Common Files\Acronis\SnapAPI\;D:\Program Files\TortoiseGit\bin;C:\Program Files\OpenVPN\bin;C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727;C:\android-sdk-windows\tools"/>
+          <item stringID="value" value="D:\Xilinx\13.4\ISE_DS\ISE\\lib\nt;D:\Xilinx\13.4\ISE_DS\ISE\\bin\nt;D:\Xilinx\13.4\ISE_DS\PlanAhead\bin;D:\Xilinx\13.4\ISE_DS\ISE\bin\nt;D:\Xilinx\13.4\ISE_DS\ISE\lib\nt;D:\Xilinx\13.4\ISE_DS\EDK\bin\nt;D:\Xilinx\13.4\ISE_DS\EDK\lib\nt;D:\Xilinx\13.4\ISE_DS\EDK\gnu\microblaze\nt\bin;D:\Xilinx\13.4\ISE_DS\EDK\gnu\powerpc-eabi\nt\bin;D:\Xilinx\13.4\ISE_DS\EDK\gnuwin\bin;D:\Xilinx\13.4\ISE_DS\common\bin\nt;D:\Xilinx\13.4\ISE_DS\common\lib\nt;D:\oraclexe\app\oracle\product\10.2.0\server\bin;D:\PROGRA~1\Borland\CBUILD~1\Bin;D:\PROGRA~1\Borland\CBUILD~1\Projects\Bpl;c:\Program Files\NVIDIA Corporation\PhysX\Common;C:\Program Files\CollabNet\Subversion Client;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\Program Files\Common Files\Ulead Systems\MPEG;C:\Program Files\Microsoft SQL Server\80\Tools\Binn\;C:\Program Files\VoiceAge\Common;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Java\jdk1.7.0_01\bin;C:\Program Files\ghc-6.8.2\bin;C:\Program Files\apache-ant-1.8.1\bin;C:\Program Files\Common Files\Acronis\SnapAPI\;D:\Program Files\TortoiseGit\bin;D:\Program Files\Git\cmd;C:\Program Files\OpenVPN\bin;C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727;C:\android-sdk-windows\tools;D:\Program Files\SDCC\bin;C:\Program Files\Common Files\Nero\Lib\"/>
         </row>
         <row stringID="row" value="1">
           <item stringID="variable" value="PATHEXT"/>
@@ -54,7 +54,7 @@
       <item DEFAULT="MIXED" label="-ifmt" stringID="XST_IFMT" value="mixed"/>
       <item DEFAULT="" label="-ofn" stringID="XST_OFN" value="CPU"/>
       <item DEFAULT="NGC" label="-ofmt" stringID="XST_OFMT" value="NGC"/>
-      <item DEFAULT="" label="-p" stringID="XST_P" value="xc3s50a-4-tq144"/>
+      <item DEFAULT="" label="-p" stringID="XST_P" value="xc3s700an-4-fgg484"/>
       <item DEFAULT="" label="-top" stringID="XST_TOP" value="CPU"/>
       <item DEFAULT="SPEED" label="-opt_mode" stringID="XST_OPTMODE" value="Speed"/>
       <item DEFAULT="1" label="-opt_level" stringID="XST_OPTLEVEL" value="1"/>
@@ -106,13 +106,23 @@
       <item DEFAULT="0%" label="-slice_utilization_ratio_maxmargin" stringID="XST_SLICEUTILIZATIONRATIOMAXMARGIN" value="5"/>
     </section>
     <section stringID="XST_HDL_SYNTHESIS_REPORT">
-      <item dataType="int" stringID="XST_RAMS" value="1"></item>
-      <item dataType="int" stringID="XST_REGISTERS" value="17">
-        <item dataType="int" stringID="XST_1BIT_REGISTER" value="9"/>
+      <item dataType="int" stringID="XST_RAMS" value="2"></item>
+      <item dataType="int" stringID="XST_ADDERSSUBTRACTORS" value="2">
+        <item dataType="int" stringID="XST_32BIT_ADDER" value="1"/>
+      </item>
+      <item dataType="int" stringID="XST_REGISTERS" value="53">
+        <item dataType="int" stringID="XST_1BIT_REGISTER" value="10"/>
         <item dataType="int" stringID="XST_2BIT_REGISTER" value="4"/>
         <item dataType="int" stringID="XST_3BIT_REGISTER" value="1"/>
-        <item dataType="int" stringID="XST_32BIT_REGISTER" value="3"/>
+        <item dataType="int" stringID="XST_32BIT_REGISTER" value="38"/>
       </item>
+      <item dataType="int" stringID="XST_COMPARATORS" value="4">
+        <item dataType="int" stringID="XST_32BIT_COMPARATOR_EQUAL" value="1"/>
+      </item>
+      <item dataType="int" stringID="XST_MULTIPLEXERS" value="3">
+        <item dataType="int" stringID="XST_32BIT_4TO1_MULTIPLEXER" value="2"/>
+      </item>
+      <item dataType="int" stringID="XST_XORS" value="1"></item>
     </section>
   </application>
 

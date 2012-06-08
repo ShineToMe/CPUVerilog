@@ -25,12 +25,12 @@ module SimpleRegister(
     output reg [31:0] q
     );
 
-
-always @(posedge clk or posedge reset)
+always @(negedge clk)
+begin
 	if(reset)
-		q <= 32'b0;
-	else	
-		q <= d;
-
+		q = 32'b0;	
+	else 
+		q = d;
+end
 
 endmodule

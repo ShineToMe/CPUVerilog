@@ -1,5 +1,5 @@
-set -tmpdir "D:/CPUVerilog/cpu/xst/projnav.tmp"
-set -xsthdpdir "D:/CPUVerilog/cpu/xst"
+set -tmpdir "D:/superPOWEROVER9000/superPOWEROVER9000/xst/projnav.tmp"
+set -xsthdpdir "D:/superPOWEROVER9000/superPOWEROVER9000/xst"
 elaborate
 -ifn CPU.prj
 -ifmt mixed

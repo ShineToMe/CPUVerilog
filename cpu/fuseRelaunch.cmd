@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "D:/CPUVerilog/cpu/testALUControl_isim_beh.exe" -prj "D:/CPUVerilog/cpu/testALUControl_beh.prj" "work.testALUControl" "work.glbl" 
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "D:/superPOWEROVER9000/superPOWEROVER9000/CPUtest_isim_beh.exe" -prj "D:/superPOWEROVER9000/superPOWEROVER9000/CPUtest_beh.prj" "work.CPUtest" "work.glbl" 
