@@ -1,0 +1,1162 @@
+Release 13.3 - xst O.76xd (nt64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.18 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.18 secs
+ 
+--> Reading design: CPU.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "CPU.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "CPU"
+Output Format                      : NGC
+Target Device                      : xc3s700an-4-fgg484
+
+---- Source Options
+Top Module Name                    : CPU
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "ambaMemorySlave.v" in library work
+Compiling verilog file "ambaMemoryMaster.v" in library work
+Module <ambaMemorySlave> compiled
+Compiling verilog file "Registers.v" in library work
+Module <ambaMemoryMaster> compiled
+Compiling verilog file "PC.v" in library work
+Module <Registers> compiled
+Compiling verilog file "InstructionRegister.v" in library work
+Module <EnableRegister> compiled
+Compiling verilog file "Control.v" in library work
+Module <InstructionRegister> compiled
+Compiling verilog file "ambatest.v" in library work
+Module <Control> compiled
+Compiling verilog file "ALUControl.v" in library work
+Module <ambatest> compiled
+Compiling verilog file "ALU.v" in library work
+Module <ALUControl> compiled
+Compiling verilog file "CPU.v" in library work
+Module <ALU> compiled
+Module <CPU> compiled
+No errors in compilation
+Analysis of file <"CPU.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <CPU> in library <work>.
+
+Analyzing hierarchy for module <Control> in library <work> with parameters.
+	ADDI = "001000"
+	ANDI = "001100"
+	BEQZ = "000100"
+	BNEZ = "000101"
+	J = "000010"
+	JAL = "000011"
+	JALR = "010011"
+	JR = "010010"
+	LHI = "001111"
+	LW = "100011"
+	ORI = "001101"
+	SEQI = "011000"
+	SLEI = "011100"
+	SLLI = "010100"
+	SLTI = "011010"
+	SNEI = "011001"
+	SRAI = "010111"
+	SRLI = "010110"
+	STATE_0 = "00000000000000000000000000000000"
+	STATE_1 = "00000000000000000000000000000001"
+	STATE_10 = "00000000000000000000000000001010"
+	STATE_11 = "00000000000000000000000000001011"
+	STATE_12 = "00000000000000000000000000001100"
+	STATE_13 = "00000000000000000000000000001101"
+	STATE_14 = "00000000000000000000000000001110"
+	STATE_15 = "00000000000000000000000000001111"
+	STATE_16 = "00000000000000000000000000010000"
+	STATE_17 = "00000000000000000000000000010001"
+	STATE_2 = "00000000000000000000000000000010"
+	STATE_3 = "00000000000000000000000000000011"
+	STATE_4 = "00000000000000000000000000000100"
+	STATE_5 = "00000000000000000000000000000101"
+	STATE_6 = "00000000000000000000000000000110"
+	STATE_7 = "00000000000000000000000000000111"
+	STATE_8 = "00000000000000000000000000001000"
+	STATE_9 = "00000000000000000000000000001001"
+	STATE_RESET = "11111111111111111111111111111111"
+	SUBI = "001010"
+	SW = "101011"
+	XORI = "001110"
+
+Analyzing hierarchy for module <EnableRegister> in library <work>.
+
+Analyzing hierarchy for module <ambatest> in library <work>.
+
+Analyzing hierarchy for module <InstructionRegister> in library <work>.
+
+Analyzing hierarchy for module <Registers> in library <work>.
+
+Analyzing hierarchy for module <ALUControl> in library <work> with parameters.
+	ADD = "100000"
+	ADDI = "001000"
+	AND = "100100"
+	ANDI = "001100"
+	BEQZ = "000000"
+	OR = "100101"
+	ORI = "001101"
+	SEQ = "101000"
+	SEQI = "011000"
+	SLE = "101100"
+	SLEI = "011100"
+	SLL = "000100"
+	SLLI = "010100"
+	SLT = "101010"
+	SLTI = "011010"
+	SNE = "101001"
+	SNEI = "011001"
+	SRA = "000111"
+	SRAI = "010111"
+	SRL = "000110"
+	SRLI = "010110"
+	SUB = "100010"
+	SUBI = "001010"
+	XOR = "100110"
+	XORI = "001110"
+
+Analyzing hierarchy for module <ALU> in library <work> with parameters.
+	ADD = "001000"
+	AND = "001100"
+	BEQZ = "000000"
+	OR = "001101"
+	SEQ = "011000"
+	SLE = "011100"
+	SLL = "010100"
+	SLT = "011010"
+	SNE = "011001"
+	SRA = "010111"
+	SRL = "010110"
+	SUB = "001010"
+	XOR = "001110"
+
+Analyzing hierarchy for module <ambaMemoryMaster> in library <work> with parameters.
+	STATE_R_ADDRESS_SETTED = "00000000000000000000000000000010"
+	STATE_R_DATA_READED = "00000000000000000000000000000011"
+	STATE_WAIT = "00000000000000000000000000000000"
+	STATE_W_ADDRESS_SETTED = "00000000000000000000000000000100"
+	STATE_W_DATA_SETTED = "00000000000000000000000000000110"
+	STATE_W_RESPONSE_ACCEPTED = "00000000000000000000000000000111"
+
+Analyzing hierarchy for module <ambaMemorySlave> in library <work> with parameters.
+	STATE_R_ADDRESS_READED_AND_DATA_LOADED = "00000000000000000000000000000010"
+	STATE_WAIT = "00000000000000000000000000000000"
+	STATE_W_ADDRESS_READED = "00000000000000000000000000000100"
+	STATE_W_DATA_WRITED = "00000000000000000000000000000110"
+	STATE_W_RESPONSE_ACCEPTED = "00000000000000000000000000000111"
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <CPU>.
+Module <CPU> is correct for synthesis.
+ 
+Analyzing module <Control> in library <work>.
+	ADDI = 6'b001000
+	ANDI = 6'b001100
+	BEQZ = 6'b000100
+	BNEZ = 6'b000101
+	J = 6'b000010
+	JAL = 6'b000011
+	JALR = 6'b010011
+	JR = 6'b010010
+	LHI = 6'b001111
+	LW = 6'b100011
+	ORI = 6'b001101
+	SEQI = 6'b011000
+	SLEI = 6'b011100
+	SLLI = 6'b010100
+	SLTI = 6'b011010
+	SNEI = 6'b011001
+	SRAI = 6'b010111
+	SRLI = 6'b010110
+	STATE_0 = 32'sb00000000000000000000000000000000
+	STATE_1 = 32'sb00000000000000000000000000000001
+	STATE_10 = 32'sb00000000000000000000000000001010
+	STATE_11 = 32'sb00000000000000000000000000001011
+	STATE_12 = 32'sb00000000000000000000000000001100
+	STATE_13 = 32'sb00000000000000000000000000001101
+	STATE_14 = 32'sb00000000000000000000000000001110
+	STATE_15 = 32'sb00000000000000000000000000001111
+	STATE_16 = 32'sb00000000000000000000000000010000
+	STATE_17 = 32'sb00000000000000000000000000010001
+	STATE_2 = 32'sb00000000000000000000000000000010
+	STATE_3 = 32'sb00000000000000000000000000000011
+	STATE_4 = 32'sb00000000000000000000000000000100
+	STATE_5 = 32'sb00000000000000000000000000000101
+	STATE_6 = 32'sb00000000000000000000000000000110
+	STATE_7 = 32'sb00000000000000000000000000000111
+	STATE_8 = 32'sb00000000000000000000000000001000
+	STATE_9 = 32'sb00000000000000000000000000001001
+	STATE_RESET = 32'sb11111111111111111111111111111111
+	SUBI = 6'b001010
+	SW = 6'b101011
+	XORI = 6'b001110
+Module <Control> is correct for synthesis.
+ 
+Analyzing module <EnableRegister> in library <work>.
+Module <EnableRegister> is correct for synthesis.
+ 
+Analyzing module <ambatest> in library <work>.
+Module <ambatest> is correct for synthesis.
+ 
+Analyzing module <ambaMemoryMaster> in library <work>.
+	STATE_R_ADDRESS_SETTED = 32'sb00000000000000000000000000000010
+	STATE_R_DATA_READED = 32'sb00000000000000000000000000000011
+	STATE_WAIT = 32'sb00000000000000000000000000000000
+	STATE_W_ADDRESS_SETTED = 32'sb00000000000000000000000000000100
+	STATE_W_DATA_SETTED = 32'sb00000000000000000000000000000110
+	STATE_W_RESPONSE_ACCEPTED = 32'sb00000000000000000000000000000111
+Module <ambaMemoryMaster> is correct for synthesis.
+ 
+Analyzing module <ambaMemorySlave> in library <work>.
+	STATE_R_ADDRESS_READED_AND_DATA_LOADED = 32'sb00000000000000000000000000000010
+	STATE_WAIT = 32'sb00000000000000000000000000000000
+	STATE_W_ADDRESS_READED = 32'sb00000000000000000000000000000100
+	STATE_W_DATA_WRITED = 32'sb00000000000000000000000000000110
+	STATE_W_RESPONSE_ACCEPTED = 32'sb00000000000000000000000000000111
+Module <ambaMemorySlave> is correct for synthesis.
+ 
+Analyzing module <InstructionRegister> in library <work>.
+Module <InstructionRegister> is correct for synthesis.
+ 
+Analyzing module <Registers> in library <work>.
+WARNING:Xst:905 - "Registers.v" line 70: One or more signals are missing in the sensitivity list of always block. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <registers>
+Module <Registers> is correct for synthesis.
+ 
+Analyzing module <ALUControl> in library <work>.
+	ADD = 6'b100000
+	ADDI = 6'b001000
+	AND = 6'b100100
+	ANDI = 6'b001100
+	BEQZ = 6'b000000
+	OR = 6'b100101
+	ORI = 6'b001101
+	SEQ = 6'b101000
+	SEQI = 6'b011000
+	SLE = 6'b101100
+	SLEI = 6'b011100
+	SLL = 6'b000100
+	SLLI = 6'b010100
+	SLT = 6'b101010
+	SLTI = 6'b011010
+	SNE = 6'b101001
+	SNEI = 6'b011001
+	SRA = 6'b000111
+	SRAI = 6'b010111
+	SRL = 6'b000110
+	SRLI = 6'b010110
+	SUB = 6'b100010
+	SUBI = 6'b001010
+	XOR = 6'b100110
+	XORI = 6'b001110
+Module <ALUControl> is correct for synthesis.
+ 
+Analyzing module <ALU> in library <work>.
+	ADD = 6'b001000
+	AND = 6'b001100
+	BEQZ = 6'b000000
+	OR = 6'b001101
+	SEQ = 6'b011000
+	SLE = 6'b011100
+	SLL = 6'b010100
+	SLT = 6'b011010
+	SNE = 6'b011001
+	SRA = 6'b010111
+	SRL = 6'b010110
+	SUB = 6'b001010
+	XOR = 6'b001110
+Module <ALU> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+INFO:Xst:2679 - Register <ambaLockedCount> in unit <Control> has a constant value of 0 during circuit operation. The register is replaced by logic.
+
+Synthesizing Unit <Control>.
+    Related source file is "Control.v".
+WARNING:Xst:646 - Signal <ambaLockedCount> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 19                                             |
+    | Transitions        | 41                                             |
+    | Inputs             | 21                                             |
+    | Outputs            | 8                                              |
+    | Clock              | clk                       (rising_edge)        |
+    | Clock enable       | isAmbaLocked              (negative)           |
+    | Reset              | reset                     (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 11111                                          |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 1-bit register for signal <PCWriteIfNonZero>.
+    Found 2-bit register for signal <PCSource>.
+    Found 2-bit register for signal <ALUOp>.
+    Found 1-bit register for signal <PCWrite>.
+    Found 1-bit register for signal <MemRead>.
+    Found 1-bit register for signal <IRWrite>.
+    Found 2-bit register for signal <RegDst>.
+    Found 1-bit register for signal <AluResultEnable>.
+    Found 1-bit register for signal <ALUSrcA>.
+    Found 3-bit register for signal <ALUSrcB>.
+    Found 1-bit register for signal <RegWrite>.
+    Found 1-bit register for signal <PCWriteIfZero>.
+    Found 1-bit register for signal <MemWrite>.
+    Found 2-bit register for signal <MemToReg>.
+    Found 1-bit register for signal <IorD>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred  21 D-type flip-flop(s).
+Unit <Control> synthesized.
+
+
+Synthesizing Unit <EnableRegister>.
+    Related source file is "PC.v".
+    Found 32-bit register for signal <q>.
+    Summary:
+	inferred  32 D-type flip-flop(s).
+Unit <EnableRegister> synthesized.
+
+
+Synthesizing Unit <InstructionRegister>.
+    Related source file is "InstructionRegister.v".
+    Found 32-bit register for signal <instruction>.
+    Summary:
+	inferred  32 D-type flip-flop(s).
+Unit <InstructionRegister> synthesized.
+
+
+Synthesizing Unit <Registers>.
+    Related source file is "Registers.v".
+    Found 32x32-bit dual-port RAM <Mram_registers> for signal <registers>.
+    Found 32x32-bit dual-port RAM <Mram_registers_ren> for signal <registers>.
+    Summary:
+	inferred   2 RAM(s).
+Unit <Registers> synthesized.
+
+
+Synthesizing Unit <ALUControl>.
+    Related source file is "ALUControl.v".
+Unit <ALUControl> synthesized.
+
+
+Synthesizing Unit <ALU>.
+    Related source file is "ALU.v".
+    Found 32-bit addsub for signal <out$addsub0000>.
+    Found 32-bit comparator equal for signal <out$cmp_eq0006> created at line 52.
+    Found 32-bit comparator lessequal for signal <out$cmp_le0000> created at line 53.
+    Found 32-bit comparator less for signal <out$cmp_lt0000> created at line 55.
+    Found 32-bit comparator not equal for signal <out$cmp_ne0000> created at line 56.
+    Found 32-bit shifter logical left for signal <out$shift0000> created at line 54.
+    Found 32-bit shifter logical right for signal <out$shift0001> created at line 57.
+    Found 32-bit xor2 for signal <out$xor0000> created at line 60.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   4 Comparator(s).
+	inferred   2 Combinational logic shifter(s).
+Unit <ALU> synthesized.
+
+
+Synthesizing Unit <ambaMemoryMaster>.
+    Related source file is "ambaMemoryMaster.v".
+WARNING:Xst:647 - Input <BResp> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <state> of Case statement line 128 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+    Using one-hot encoding for signal <state>.
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <state> of Case statement line 128 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <state> of Case statement line 128 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <state> of Case statement line 128 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <state> of Case statement line 128 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <state> of Case statement line 128 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <state> of Case statement line 128 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <state> of Case statement line 128 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <state> of Case statement line 128 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <state> of Case statement line 128 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <state> of Case statement line 128 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <state> of Case statement line 128 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+    Found 1-bit register for signal <isLocked>.
+    Found 32-bit register for signal <ARAddr>.
+    Found 1-bit register for signal <RResp>.
+    Found 32-bit register for signal <AWAddr>.
+    Found 32-bit register for signal <MemData>.
+    Found 1-bit register for signal <WValid>.
+    Found 1-bit register for signal <BReady>.
+    Found 1-bit register for signal <RReady>.
+    Found 1-bit register for signal <AWValid>.
+    Found 1-bit register for signal <ARValid>.
+    Found 32-bit register for signal <WData>.
+    Found 32-bit 4-to-1 multiplexer for signal <MemData$mux0000> created at line 128.
+    Found 5-bit register for signal <state>.
+    Found 32-bit 4-to-1 multiplexer for signal <WData$mux0000> created at line 128.
+    Summary:
+	inferred 140 D-type flip-flop(s).
+	inferred  64 Multiplexer(s).
+Unit <ambaMemoryMaster> synthesized.
+
+
+Synthesizing Unit <ambaMemorySlave>.
+    Related source file is "ambaMemorySlave.v".
+WARNING:Xst:647 - Input <RResp> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <BReady> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <RReady> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1780 - Signal <RData_next> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <Adress<31:5>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:737 - Found 32-bit latch for signal <mem_0>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <mem_1>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <mem_2>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <mem_3>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <mem_4>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <mem_5>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <mem_6>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <mem_7>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <mem_8>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <mem_9>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <mem_10>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <mem_11>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <mem_12>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <mem_13>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <mem_14>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <mem_16>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <mem_17>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <mem_18>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <mem_19>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <mem_20>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <mem_21>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <mem_22>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <mem_23>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <mem_24>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <mem_25>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <mem_26>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <mem_27>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <mem_28>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <mem_29>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <mem_30>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <mem_31>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 32-bit latch for signal <Adress>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Using one-hot encoding for signal <state>.
+INFO:Xst:2117 - HDL ADVISOR - Mux Selector <state> of Case statement line 146 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
+   	- add an 'INIT' attribute on signal <state> (optimization is then done without any risk)
+   	- use the attribute 'signal_encoding user' to avoid onehot optimization
+   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+WARNING:Xst:737 - Found 4-bit latch for signal <state_next>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 1-bit latch for signal <RValid_next>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 1-bit latch for signal <ARReady_next>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 1-bit latch for signal <WReady_next>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 1-bit latch for signal <BResp_next>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+    Found 1-bit register for signal <BValid>.
+    Found 1-bit register for signal <BResp>.
+    Found 1-bit register for signal <RValid>.
+    Found 32-bit register for signal <RData>.
+    Found 1-bit register for signal <WReady>.
+    Found 1-bit register for signal <AWReady>.
+    Found 1-bit register for signal <ARReady>.
+    Found 32-bit 32-to-1 multiplexer for signal <$varindex0000> created at line 134.
+    Found 32-bit 4-to-1 multiplexer for signal <Adress$mux0000>.
+    Found 4-bit register for signal <state>.
+    Summary:
+	inferred  42 D-type flip-flop(s).
+	inferred  64 Multiplexer(s).
+Unit <ambaMemorySlave> synthesized.
+
+
+Synthesizing Unit <ambatest>.
+    Related source file is "ambatest.v".
+Unit <ambatest> synthesized.
+
+
+Synthesizing Unit <CPU>.
+    Related source file is "CPU.v".
+    Found 32-bit adder for signal <JumpAdress>.
+    Found 32-bit 4-to-1 multiplexer for signal <newPC>.
+    Found 32-bit 4-to-1 multiplexer for signal <writeData>.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  64 Multiplexer(s).
+Unit <CPU> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 32x32-bit dual-port RAM                               : 2
+# Adders/Subtractors                                   : 2
+ 32-bit adder                                          : 1
+ 32-bit addsub                                         : 1
+# Registers                                            : 41
+ 1-bit register                                        : 23
+ 2-bit register                                        : 4
+ 3-bit register                                        : 1
+ 32-bit register                                       : 11
+ 4-bit register                                        : 1
+ 5-bit register                                        : 1
+# Latches                                              : 37
+ 1-bit latch                                           : 4
+ 32-bit latch                                          : 32
+ 4-bit latch                                           : 1
+# Comparators                                          : 4
+ 32-bit comparator equal                               : 1
+ 32-bit comparator less                                : 1
+ 32-bit comparator lessequal                           : 1
+ 32-bit comparator not equal                           : 1
+# Multiplexers                                         : 6
+ 32-bit 32-to-1 multiplexer                            : 1
+ 32-bit 4-to-1 multiplexer                             : 5
+# Logic shifters                                       : 2
+ 32-bit shifter logical left                           : 1
+ 32-bit shifter logical right                          : 1
+# Xors                                                 : 1
+ 32-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <control/state/FSM> on signal <state[1:19]> with one-hot encoding.
+------------------------------
+ State | Encoding
+------------------------------
+ 00000 | 0000000000000000100
+ 00001 | 0000000000000000010
+ 00010 | 0000000000000001000
+ 00011 | 0000100000000000000
+ 00100 | 0010000000000000000
+ 00101 | 0001000000000000000
+ 00110 | 0000010000000000000
+ 00111 | 0100000000000000000
+ 01000 | 0000000000000010000
+ 01001 | 1000000000000000000
+ 01010 | 0000000000000100000
+ 01011 | 0000000000001000000
+ 01100 | 0000000000010000000
+ 01101 | 0000000000100000000
+ 01110 | 0000000001000000000
+ 01111 | 0000000010000000000
+ 10000 | 0000000100000000000
+ 10001 | 0000001000000000000
+ 11111 | 0000000000000000001
+------------------------------
+INFO:Xst:2261 - The FF/Latch <ARReady> in Unit <ambaMemSlave> is equivalent to the following FF/Latch, which will be removed : <AWReady> 
+
+Synthesizing (advanced) Unit <CPU>.
+INFO:Xst:3226 - The RAM <registers/Mram_registers> will be implemented as a BLOCK RAM, absorbing the following register(s): <instructionRegister/instruction>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <innerClk>      | fall     |
+    |     weA            | connected to signal <_and0002>      | high     |
+    |     addrA          | connected to signal <writeRegister> |          |
+    |     diA            | connected to signal <writeData>     |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <innerClk>      | fall     |
+    |     enB            | connected to signal <_and0001_0>    | high     |
+    |     addrB          | connected to signal <memData>       |          |
+    |     doB            | connected to signal <readData1>     |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <registers/Mram_registers_ren> will be implemented as a BLOCK RAM, absorbing the following register(s): <instructionRegister/instruction>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <innerClk>      | fall     |
+    |     weA            | connected to signal <_and0002>      | high     |
+    |     addrA          | connected to signal <writeRegister> |          |
+    |     diA            | connected to signal <writeData>     |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <innerClk>      | fall     |
+    |     enB            | connected to signal <_and0001_1>    | high     |
+    |     addrB          | connected to signal <memData>       |          |
+    |     doB            | connected to signal <readData2>     |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <CPU> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 32x32-bit dual-port block RAM                         : 2
+# Adders/Subtractors                                   : 2
+ 32-bit adder                                          : 1
+ 32-bit addsub                                         : 1
+# Registers                                            : 402
+ Flip-Flops                                            : 402
+# Latches                                              : 37
+ 1-bit latch                                           : 4
+ 32-bit latch                                          : 32
+ 4-bit latch                                           : 1
+# Comparators                                          : 4
+ 32-bit comparator equal                               : 1
+ 32-bit comparator less                                : 1
+ 32-bit comparator lessequal                           : 1
+ 32-bit comparator not equal                           : 1
+# Multiplexers                                         : 6
+ 32-bit 32-to-1 multiplexer                            : 1
+ 32-bit 4-to-1 multiplexer                             : 5
+# Logic shifters                                       : 2
+ 32-bit shifter logical left                           : 1
+ 32-bit shifter logical right                          : 1
+# Xors                                                 : 1
+ 32-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <BResp> in Unit <ambaMemorySlave> is equivalent to the following FF/Latch, which will be removed : <BValid> 
+INFO:Xst:2261 - The FF/Latch <ARReady> in Unit <ambaMemorySlave> is equivalent to the following FF/Latch, which will be removed : <AWReady> 
+WARNING:Xst:2677 - Node <Adress_5> of sequential type is unconnected in block <ambaMemorySlave>.
+WARNING:Xst:2677 - Node <Adress_6> of sequential type is unconnected in block <ambaMemorySlave>.
+WARNING:Xst:2677 - Node <Adress_7> of sequential type is unconnected in block <ambaMemorySlave>.
+WARNING:Xst:2677 - Node <Adress_8> of sequential type is unconnected in block <ambaMemorySlave>.
+WARNING:Xst:2677 - Node <Adress_9> of sequential type is unconnected in block <ambaMemorySlave>.
+WARNING:Xst:2677 - Node <Adress_10> of sequential type is unconnected in block <ambaMemorySlave>.
+WARNING:Xst:2677 - Node <Adress_11> of sequential type is unconnected in block <ambaMemorySlave>.
+WARNING:Xst:2677 - Node <Adress_12> of sequential type is unconnected in block <ambaMemorySlave>.
+WARNING:Xst:2677 - Node <Adress_13> of sequential type is unconnected in block <ambaMemorySlave>.
+WARNING:Xst:2677 - Node <Adress_14> of sequential type is unconnected in block <ambaMemorySlave>.
+WARNING:Xst:2677 - Node <Adress_15> of sequential type is unconnected in block <ambaMemorySlave>.
+WARNING:Xst:2677 - Node <Adress_16> of sequential type is unconnected in block <ambaMemorySlave>.
+WARNING:Xst:2677 - Node <Adress_17> of sequential type is unconnected in block <ambaMemorySlave>.
+WARNING:Xst:2677 - Node <Adress_18> of sequential type is unconnected in block <ambaMemorySlave>.
+WARNING:Xst:2677 - Node <Adress_19> of sequential type is unconnected in block <ambaMemorySlave>.
+WARNING:Xst:2677 - Node <Adress_20> of sequential type is unconnected in block <ambaMemorySlave>.
+WARNING:Xst:2677 - Node <Adress_21> of sequential type is unconnected in block <ambaMemorySlave>.
+WARNING:Xst:2677 - Node <Adress_22> of sequential type is unconnected in block <ambaMemorySlave>.
+WARNING:Xst:2677 - Node <Adress_23> of sequential type is unconnected in block <ambaMemorySlave>.
+WARNING:Xst:2677 - Node <Adress_24> of sequential type is unconnected in block <ambaMemorySlave>.
+WARNING:Xst:2677 - Node <Adress_25> of sequential type is unconnected in block <ambaMemorySlave>.
+WARNING:Xst:2677 - Node <Adress_26> of sequential type is unconnected in block <ambaMemorySlave>.
+WARNING:Xst:2677 - Node <Adress_27> of sequential type is unconnected in block <ambaMemorySlave>.
+WARNING:Xst:2677 - Node <Adress_28> of sequential type is unconnected in block <ambaMemorySlave>.
+WARNING:Xst:2677 - Node <Adress_29> of sequential type is unconnected in block <ambaMemorySlave>.
+WARNING:Xst:2677 - Node <Adress_30> of sequential type is unconnected in block <ambaMemorySlave>.
+WARNING:Xst:2677 - Node <Adress_31> of sequential type is unconnected in block <ambaMemorySlave>.
+INFO:Xst:2261 - The FF/Latch <IRWrite> in Unit <Control> is equivalent to the following FF/Latch, which will be removed : <state_FSM_FFd17> 
+INFO:Xst:2261 - The FF/Latch <ALUSrcB_2> in Unit <Control> is equivalent to the following FF/Latch, which will be removed : <state_FSM_FFd18> 
+
+Optimizing unit <CPU> ...
+
+Optimizing unit <Control> ...
+
+Optimizing unit <EnableRegister> ...
+
+Optimizing unit <ALU> ...
+
+Optimizing unit <ambaMemoryMaster> ...
+
+Optimizing unit <ambaMemorySlave> ...
+WARNING:Xst:2677 - Node <memory/ambaMemMaster/BReady> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <memory/ambaMemMaster/AWAddr_31> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <memory/ambaMemMaster/AWAddr_30> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <memory/ambaMemMaster/AWAddr_29> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <memory/ambaMemMaster/AWAddr_28> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <memory/ambaMemMaster/AWAddr_27> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <memory/ambaMemMaster/AWAddr_26> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <memory/ambaMemMaster/AWAddr_25> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <memory/ambaMemMaster/AWAddr_24> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <memory/ambaMemMaster/AWAddr_23> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <memory/ambaMemMaster/AWAddr_22> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <memory/ambaMemMaster/AWAddr_21> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <memory/ambaMemMaster/AWAddr_20> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <memory/ambaMemMaster/AWAddr_19> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <memory/ambaMemMaster/AWAddr_18> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <memory/ambaMemMaster/AWAddr_17> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <memory/ambaMemMaster/AWAddr_16> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <memory/ambaMemMaster/AWAddr_15> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <memory/ambaMemMaster/AWAddr_14> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <memory/ambaMemMaster/AWAddr_13> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <memory/ambaMemMaster/AWAddr_12> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <memory/ambaMemMaster/AWAddr_11> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <memory/ambaMemMaster/AWAddr_10> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <memory/ambaMemMaster/AWAddr_9> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <memory/ambaMemMaster/AWAddr_8> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <memory/ambaMemMaster/AWAddr_7> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <memory/ambaMemMaster/AWAddr_6> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <memory/ambaMemMaster/AWAddr_5> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <memory/ambaMemMaster/RResp> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <memory/ambaMemMaster/RReady> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <memory/ambaMemMaster/ARAddr_31> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <memory/ambaMemMaster/ARAddr_30> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <memory/ambaMemMaster/ARAddr_29> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <memory/ambaMemMaster/ARAddr_28> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <memory/ambaMemMaster/ARAddr_27> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <memory/ambaMemMaster/ARAddr_26> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <memory/ambaMemMaster/ARAddr_25> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <memory/ambaMemMaster/ARAddr_24> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <memory/ambaMemMaster/ARAddr_23> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <memory/ambaMemMaster/ARAddr_22> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <memory/ambaMemMaster/ARAddr_21> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <memory/ambaMemMaster/ARAddr_20> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <memory/ambaMemMaster/ARAddr_19> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <memory/ambaMemMaster/ARAddr_18> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <memory/ambaMemMaster/ARAddr_17> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <memory/ambaMemMaster/ARAddr_16> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <memory/ambaMemMaster/ARAddr_15> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <memory/ambaMemMaster/ARAddr_14> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <memory/ambaMemMaster/ARAddr_13> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <memory/ambaMemMaster/ARAddr_12> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <memory/ambaMemMaster/ARAddr_11> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <memory/ambaMemMaster/ARAddr_10> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <memory/ambaMemMaster/ARAddr_9> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <memory/ambaMemMaster/ARAddr_8> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <memory/ambaMemMaster/ARAddr_7> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <memory/ambaMemMaster/ARAddr_6> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <memory/ambaMemMaster/ARAddr_5> of sequential type is unconnected in block <CPU>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block CPU, actual ratio is 23.
+FlipFlop control/ALUSrcA has been replicated 2 time(s)
+FlipFlop control/ALUSrcB_1 has been replicated 2 time(s)
+FlipFlop control/ALUSrcB_2 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 346
+ Flip-Flops                                            : 346
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : CPU.ngr
+Top Level Output File Name         : CPU
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 66
+
+Cell Usage :
+# BELS                             : 3368
+#      GND                         : 1
+#      INV                         : 2
+#      LUT2                        : 69
+#      LUT2_L                      : 1
+#      LUT3                        : 1846
+#      LUT3_D                      : 16
+#      LUT3_L                      : 4
+#      LUT4                        : 506
+#      LUT4_D                      : 40
+#      LUT4_L                      : 55
+#      MUXCY                       : 150
+#      MUXF5                       : 389
+#      MUXF6                       : 128
+#      MUXF7                       : 64
+#      MUXF8                       : 32
+#      VCC                         : 1
+#      XORCY                       : 64
+# FlipFlops/Latches                : 1351
+#      FD                          : 43
+#      FD_1                        : 40
+#      FDCE                        : 31
+#      FDCE_1                      : 160
+#      FDE                         : 32
+#      FDR                         : 1
+#      FDRE_1                      : 32
+#      FDS                         : 4
+#      FDSE                        : 3
+#      LD                          : 13
+#      LDE                         : 992
+# RAMS                             : 2
+#      RAMB16BWE                   : 2
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 65
+#      IBUF                        : 33
+#      OBUF                        : 32
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s700anfgg484-4 
+
+ Number of Slices:                     1394  out of   5888    23%  
+ Number of Slice Flip Flops:           1351  out of  11776    11%  
+ Number of 4 input LUTs:               2539  out of  11776    21%  
+ Number of IOs:                          66
+ Number of bonded IOBs:                  66  out of    372    17%  
+ Number of BRAMs:                         2  out of     20    10%  
+ Number of GCLKs:                         2  out of     24     8%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-------------------------------------------------------------------------------------+------------------------------------------+-------+
+Clock Signal                                                                         | Clock buffer(FF name)                    | Load  |
+-------------------------------------------------------------------------------------+------------------------------------------+-------+
+clk                                                                                  | BUFGP                                    | 348   |
+memory/ambaMemSlave/state_21                                                         | BUFG                                     | 992   |
+memory/ambaMemSlave/state_0                                                          | NONE(memory/ambaMemSlave/Adress_4)       | 5     |
+memory/ambaMemSlave/state_next_not0001(memory/ambaMemSlave/state_next_not00011:O)    | NONE(*)(memory/ambaMemSlave/state_next_3)| 4     |
+memory/ambaMemSlave/RValid_next_not0001(memory/ambaMemSlave/RValid_next_not00011:O)  | NONE(*)(memory/ambaMemSlave/RValid_next) | 1     |
+memory/ambaMemSlave/ARReady_next_not0001(memory/ambaMemSlave/ARReady_next_not00011:O)| NONE(*)(memory/ambaMemSlave/ARReady_next)| 1     |
+memory/ambaMemSlave/WReady_next_not0001(memory/ambaMemSlave/WReady_next_not0001:O)   | NONE(*)(memory/ambaMemSlave/WReady_next) | 1     |
+memory/ambaMemSlave/BResp_next_not0001(memory/ambaMemSlave/BResp_next_not00011:O)    | NONE(*)(memory/ambaMemSlave/BResp_next)  | 1     |
+-------------------------------------------------------------------------------------+------------------------------------------+-------+
+(*) These 5 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+reset                              | IBUF                   | 191   |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 30.024ns (Maximum Frequency: 33.306MHz)
+   Minimum input arrival time before clock: 4.450ns
+   Maximum output required time after clock: 5.779ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 30.024ns (frequency: 33.306MHz)
+  Total number of paths / destination ports: 2645843 / 694
+-------------------------------------------------------------------------
+Delay:               15.012ns (Levels of Logic = 15)
+  Source:            control/ALUSrcB_0 (FF)
+  Destination:       pc/q_31 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk falling
+
+  Data Path: control/ALUSrcB_0 to pc/q_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            13   0.591   0.986  control/ALUSrcB_0 (control/ALUSrcB_0)
+     LUT4:I3->O            3   0.648   0.534  aluSrcBValue<1>_SW0 (N286)
+     LUT4_D:I3->O         17   0.648   1.131  aluSrcBValue<1>_2 (aluSrcBValue<1>_1)
+     LUT4:I1->O            1   0.643   0.000  alu/Maddsub_out_addsub0000_lut<1> (alu/Maddsub_out_addsub0000_lut<1>)
+     MUXCY:S->O            1   0.632   0.000  alu/Maddsub_out_addsub0000_cy<1> (alu/Maddsub_out_addsub0000_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  alu/Maddsub_out_addsub0000_cy<2> (alu/Maddsub_out_addsub0000_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  alu/Maddsub_out_addsub0000_cy<3> (alu/Maddsub_out_addsub0000_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  alu/Maddsub_out_addsub0000_cy<4> (alu/Maddsub_out_addsub0000_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  alu/Maddsub_out_addsub0000_cy<5> (alu/Maddsub_out_addsub0000_cy<5>)
+     XORCY:CI->O           1   0.844   0.423  alu/Maddsub_out_addsub0000_xor<6> (alu/out_addsub0000<6>)
+     LUT4:I3->O            1   0.648   0.452  alu/out<6>83_SW0 (N393)
+     LUT4:I2->O            4   0.648   0.590  alu/out<6>108 (ALUResult<6>)
+     LUT4:I3->O            1   0.648   0.452  alu/zero_wg_lut<7>_SW1 (N360)
+     LUT4:I2->O            1   0.648   0.000  alu/zero_wg_lut<7> (alu/zero_wg_lut<7>)
+     MUXCY:S->O            1   0.836   0.420  alu/zero_wg_cy<7> (alu/zero_wg_cy<7>)
+     MUXF5:S->O           32   0.756   1.262  _and0000 (_and0000)
+     FDCE_1:CE                 0.312          pc/q_0
+    ----------------------------------------
+    Total                     15.012ns (8.762ns logic, 6.250ns route)
+                                       (58.4% logic, 41.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'memory/ambaMemSlave/state_21'
+  Clock period: 2.234ns (frequency: 447.628MHz)
+  Total number of paths / destination ports: 992 / 992
+-------------------------------------------------------------------------
+Delay:               2.234ns (Levels of Logic = 1)
+  Source:            memory/ambaMemSlave/mem_16_31 (LATCH)
+  Destination:       memory/ambaMemSlave/mem_16_31 (LATCH)
+  Source Clock:      memory/ambaMemSlave/state_21 falling
+  Destination Clock: memory/ambaMemSlave/state_21 falling
+
+  Data Path: memory/ambaMemSlave/mem_16_31 to memory/ambaMemSlave/mem_16_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              3   0.728   0.611  memory/ambaMemSlave/mem_16_31 (memory/ambaMemSlave/mem_16_31)
+     LUT3:I1->O            1   0.643   0.000  memory/ambaMemSlave/mem_16_mux0000<31>1 (memory/ambaMemSlave/mem_16_mux0000<31>)
+     LDE:D                     0.252          memory/ambaMemSlave/mem_16_31
+    ----------------------------------------
+    Total                      2.234ns (1.623ns logic, 0.611ns route)
+                                       (72.6% logic, 27.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'memory/ambaMemSlave/state_0'
+  Clock period: 3.146ns (frequency: 317.864MHz)
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Delay:               3.146ns (Levels of Logic = 1)
+  Source:            memory/ambaMemSlave/Adress_0 (LATCH)
+  Destination:       memory/ambaMemSlave/Adress_0 (LATCH)
+  Source Clock:      memory/ambaMemSlave/state_0 falling
+  Destination Clock: memory/ambaMemSlave/state_0 falling
+
+  Data Path: memory/ambaMemSlave/Adress_0 to memory/ambaMemSlave/Adress_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q             545   0.728   1.410  memory/ambaMemSlave/Adress_0 (memory/ambaMemSlave/Adress_0)
+     MUXF5:S->O            1   0.756   0.000  memory/ambaMemSlave/Mmux_Adress_mux00002_f5 (memory/ambaMemSlave/Adress_mux0000<0>)
+     LD:D                      0.252          memory/ambaMemSlave/Adress_0
+    ----------------------------------------
+    Total                      3.146ns (1.736ns logic, 1.410ns route)
+                                       (55.2% logic, 44.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 76 / 76
+-------------------------------------------------------------------------
+Offset:              4.450ns (Levels of Logic = 7)
+  Source:            SW<31> (PAD)
+  Destination:       memory/ambaMemSlave/RData_31 (FF)
+  Destination Clock: clk falling
+
+  Data Path: SW<31> to memory/ambaMemSlave/RData_31
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.849   0.452  SW_31_IBUF (SW_31_IBUF)
+     LUT3:I2->O            1   0.648   0.452  memory/ambaMemSlave/mem_15_mux0000<31>1 (memory/ambaMemSlave/mem<15><31>)
+     LUT3:I2->O            1   0.648   0.000  memory/ambaMemSlave/Mmux__varindex0000_799 (memory/ambaMemSlave/Mmux__varindex0000_799)
+     MUXF5:I1->O           1   0.276   0.000  memory/ambaMemSlave/Mmux__varindex0000_6_f5_73 (memory/ambaMemSlave/Mmux__varindex0000_6_f574)
+     MUXF6:I1->O           1   0.291   0.000  memory/ambaMemSlave/Mmux__varindex0000_5_f6_48 (memory/ambaMemSlave/Mmux__varindex0000_5_f649)
+     MUXF7:I1->O           1   0.291   0.000  memory/ambaMemSlave/Mmux__varindex0000_4_f7_23 (memory/ambaMemSlave/Mmux__varindex0000_4_f724)
+     MUXF8:I0->O           1   0.291   0.000  memory/ambaMemSlave/Mmux__varindex0000_2_f8_23 (memory/ambaMemSlave/_varindex0000<31>)
+     FD_1:D                    0.252          memory/ambaMemSlave/RData_31
+    ----------------------------------------
+    Total                      4.450ns (3.546ns logic, 0.904ns route)
+                                       (79.7% logic, 20.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'memory/ambaMemSlave/state_21'
+  Total number of paths / destination ports: 32 / 32
+-------------------------------------------------------------------------
+Offset:              5.779ns (Levels of Logic = 1)
+  Source:            memory/ambaMemSlave/mem_16_31 (LATCH)
+  Destination:       LED<31> (PAD)
+  Source Clock:      memory/ambaMemSlave/state_21 falling
+
+  Data Path: memory/ambaMemSlave/mem_16_31 to LED<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q              3   0.728   0.531  memory/ambaMemSlave/mem_16_31 (memory/ambaMemSlave/mem_16_31)
+     OBUF:I->O                 4.520          LED_31_OBUF (LED<31>)
+    ----------------------------------------
+    Total                      5.779ns (5.248ns logic, 0.531ns route)
+                                       (90.8% logic, 9.2% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 50.00 secs
+Total CPU time to Xst completion: 49.47 secs
+ 
+--> 
+
+Total memory usage is 453412 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  129 (   0 filtered)
+Number of infos    :   28 (   0 filtered)
+

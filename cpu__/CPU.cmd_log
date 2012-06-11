@@ -1,1 +1,0 @@
-xst -intstyle ise -ifn "D:/CPUVerilog/cpu/CPU.xst" -ofn "D:/CPUVerilog/cpu/CPU.syr" 

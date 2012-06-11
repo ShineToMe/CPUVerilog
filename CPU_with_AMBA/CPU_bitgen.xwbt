@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\stud\3100\vhdl_cpu\superPOWEROVER9000_new_amba\superPOWEROVER9000\CPU.ncd
+OUTFILE=C:\Users\stud\3100\vhdl_cpu\superPOWEROVER9000_new_amba\superPOWEROVER9000\CPU.bit
+FAMILY=Spartan3A and Spartan3AN
+PART=xc3s700an-4fgg484
+WORKINGDIR=C:\Users\stud\3100\vhdl_cpu\superPOWEROVER9000_new_amba\superPOWEROVER9000
+LICENSE=ISE
+USER_INFO=No user information available.

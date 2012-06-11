@@ -1,0 +1,29 @@
+Command line:
+   ambaMemorySlave_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  3046
+
+Sun Jun 10 23:06:52 2012
+
+
+ Elaboration Time: 0.0625 sec
+
+ Current Memory Usage: 317.284 Meg
+
+ Total Signals          : 27
+ Total Nets             : 229
+ Total Signal Drivers   : 14
+ Total Blocks           : 2
+ Total Primitive Blocks : 2
+ Total Processes        : 20
+ Total Traceable Variables  : 48
+ Total Scalar Nets and Variables : 1711
+Total Line Count : 124
+
+ Total Simulation Time: 0.125 sec
+
+ Current Memory Usage: 317.284 Meg
+
+Sun Jun 10 23:08:40 2012
+

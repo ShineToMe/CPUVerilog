@@ -1,0 +1,24 @@
+ISim log file
+Running: D:\cpu_verilog\superPOWEROVER9000_new_amba_not_work\superPOWEROVER9000_new_amba_not_work\superPOWEROVER9000_new_amba\superPOWEROVER9000\Test_CPU_with_memory_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb D:/cpu_verilog/superPOWEROVER9000_new_amba_not_work/superPOWEROVER9000_new_amba_not_work/superPOWEROVER9000_new_amba/superPOWEROVER9000/Test_CPU_with_memory_isim_beh.wdb 
+ISim O.87xd (signature 0x2f00eba5)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+WARNING: File "D:/cpu_verilog/superPOWEROVER9000_new_amba_not_work/superPOWEROVER9000_new_amba_not_work/superPOWEROVER9000_new_amba/superPOWEROVER9000/CPU_with_memory.v" Line 34.  For instance uut/ambaMemSlave/, width 2 of formal port BRESP is not equal to width 1 of actual signal BRESP.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# restart
+# run all
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Stopped at time : 31426600 ns : File "D:/cpu_verilog/superPOWEROVER9000_new_amba_not_work/superPOWEROVER9000_new_amba_not_work/superPOWEROVER9000_new_amba/superPOWEROVER9000/CPU.v" Line 94
+# restart
+# run all
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Stopped at time : 30992600 ns : File "D:/cpu_verilog/superPOWEROVER9000_new_amba_not_work/superPOWEROVER9000_new_amba_not_work/superPOWEROVER9000_new_amba/superPOWEROVER9000/ALU.v" Line 46
